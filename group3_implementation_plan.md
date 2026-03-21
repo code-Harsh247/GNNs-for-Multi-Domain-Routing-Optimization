@@ -137,6 +137,7 @@ GraphML is the primary format. All node and edge attributes must be declared as 
   <key id="x_coord" for="node" attr.name="x_coord" attr.type="double"/>
   <key id="y_coord" for="node" attr.name="y_coord" attr.type="double"/>
   <key id="domain_id" for="node" attr.name="domain_id" attr.type="int"/>
+  <key id="edge_id" for="edge" attr.name="edge_id" attr.type="int"/>
   <key id="bandwidth_mbps" for="edge" attr.name="bandwidth_mbps" attr.type="double"/>
   <key id="propagation_delay_ms" for="edge" attr.name="propagation_delay_ms" attr.type="double"/>
   <key id="is_inter_domain" for="edge" attr.name="is_inter_domain" attr.type="boolean"/>
@@ -152,6 +153,7 @@ GraphML is the primary format. All node and edge attributes must be declared as 
       <data key="domain_id">0</data>
     </node>
     <edge id="e0" source="0" target="1">
+      <data key="edge_id">0</data>
       <data key="bandwidth_mbps">500.0</data>
       <data key="propagation_delay_ms">2.5</data>
       <data key="is_inter_domain">false</data>

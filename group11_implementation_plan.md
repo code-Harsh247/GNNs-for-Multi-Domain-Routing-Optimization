@@ -141,19 +141,17 @@ For every edge in every topology, construct a feature vector in this exact colum
 | 2 | `is_inter_domain` | Group 3 JSON | float | 1.0 if True, 0.0 if False |
 | 3 | `link_reliability` | Group 3 JSON | float | Already in [0, 1] |
 | 4 | `cost_norm` | Group 3 JSON | float | value / max cost in this topology |
-| 5 | `latency_low_norm` | Group 3 Labels | float | low load latency / 200.0 (cap at 200ms) |
-| 6 | `latency_medium_norm` | Group 3 Labels | float | medium load latency / 200.0 |
-| 7 | `latency_high_norm` | Group 3 Labels | float | high load latency / 200.0 |
-| 8 | `latency_flash_norm` | Group 3 Labels | float | flash load latency / 200.0 |
 
-> **Edge feature vector size: 9 dimensions**
+> **Edge feature vector size: 5 dimensions**
 
-All edges across all topologies must have a feature vector of exactly **9 dimensions**.
+> **Note on latency values:** The 4 per-link latency values (low, medium, high, flash load conditions) are stored exclusively in `y_edge` in the final PyG Data object. They must NOT be included in `edge_attr` to prevent target leakage during model training.
 
-**Joining labels to edges:** Use `edge_id` as the join key between `topology_XXX.json` and `topology_XXX_labels.json`.
+All edges across all topologies must have a feature vector of exactly **5 dimensions**.
+
+**Joining labels to edges:** Use `edge_id` as the join key between `topology_XXX.json` and `topology_XXX_labels.json` when building `y_edge`.
 
 **Saving edge features:**
-Save as a 2D NumPy array of shape `(num_edges, 9)` to `topology_XXX_edge_features.npy`.
+Save as a 2D NumPy array of shape `(num_edges, 5)` to `topology_XXX_edge_features.npy`.
 
 ---
 
@@ -169,12 +167,12 @@ One feature vector per topology describing the entire graph:
 | 3 | `avg_bandwidth_norm` | mean(all edge bandwidths) / 1000.0 | |
 | 4 | `avg_propagation_delay_norm` | mean(all edge propagation delays) / 100.0 | |
 | 5 | `inter_domain_ratio` | num_inter_domain_edges / num_edges | Fraction of cross-domain links |
-| 6–9 | `topology_type_onehot` | One-hot over 5 types | random, scale_free, mesh, ring, hybrid |
+| 6–10 | `topology_type_onehot` | One-hot over 5 types | random, scale_free, mesh, ring, hybrid |
 
-> **Global feature vector size: 10 dimensions**
+> **Global feature vector size: 11 dimensions**
 
 **Saving global features:**
-Save as a 1D NumPy array of shape `(10,)` to `topology_XXX_global_features.npy`.
+Save as a 1D NumPy array of shape `(11,)` to `topology_XXX_global_features.npy`.
 
 ---
 
@@ -305,8 +303,8 @@ For each topology, create one `torch_geometric.data.Data` object with these fiel
 |---|---|---|
 | `x` | `(num_nodes, 12)` | Node feature matrix |
 | `edge_index` | `(2, num_edges)` | Edge connectivity in COO format |
-| `edge_attr` | `(num_edges, 9)` | Edge feature matrix |
-| `u` | `(1, 10)` | Global feature vector |
+| `edge_attr` | `(num_edges, 5)` | Edge feature matrix (static link properties only — no latency) |
+| `u` | `(1, 11)` | Global feature vector |
 | `y_edge` | `(num_edges, 4)` | Target: per-link latency under 4 load conditions |
 | `topology_id` | scalar | Topology index |
 | `num_nodes` | scalar | Number of nodes |
@@ -331,8 +329,8 @@ torch.save(data_list, 'data/processed/dataset/gnn_dataset.pt')
 {
   "total_graphs": 500,
   "node_feature_dim": 12,
-  "edge_feature_dim": 9,
-  "global_feature_dim": 10,
+  "edge_feature_dim": 5,
+  "global_feature_dim": 11,
   "target_dim": 4,
   "load_conditions": ["low", "medium", "high", "flash"],
   "graphs": [
@@ -354,8 +352,8 @@ Write a script `tests/validate_group11.py` that checks:
 
 - [ ] Every topology in `topology_index.json` has a corresponding node, edge, and global feature file
 - [ ] Node feature arrays are shape `(num_nodes, 12)` — no topology has a different dimension
-- [ ] Edge feature arrays are shape `(num_edges, 9)` — no topology has a different dimension
-- [ ] Global feature arrays are shape `(10,)` for every topology
+- [ ] Edge feature arrays are shape `(num_edges, 5)` — no topology has a different dimension
+- [ ] Global feature arrays are shape `(11,)` for every topology
 - [ ] No NaN or Inf values in any feature array
 - [ ] All values in node and edge feature arrays are in [0, 1] range (post-normalization)
 - [ ] Every topology has a traffic file with all 4 application types and all 4 load conditions
@@ -426,7 +424,7 @@ If Group 3 is delayed, immediately flag it — do not wait. You can write and te
 - [ ] `validate_group11.py` runs with zero errors on full dataset
 - [ ] `gnn_dataset.pt` loads correctly and contains 500+ graphs
 - [ ] All graphs have `x`, `edge_index`, `edge_attr`, `u`, `y_edge` fields
-- [ ] Feature dimensions are consistent: node=12, edge=9, global=10, target=4
+- [ ] Feature dimensions are consistent: node=12, edge=5, global=11, target=4
 - [ ] No NaN or Inf values anywhere in the dataset
 - [ ] `dataset_index.json` is complete and accurate
 - [ ] `docs/data_card.md` is written and covers all features
