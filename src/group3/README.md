@@ -74,6 +74,8 @@ Group 11 consumes the files produced here directly. The file formats, naming con
 │   ├── raw/                             # Generated outputs (not committed)
 │   └── processed/                       # Processed datasets
 
+---
+
 ## 3. Architecture Overview
 
 The pipeline runs in a single loop over all topologies. For each topology it performs two sequential phases:
