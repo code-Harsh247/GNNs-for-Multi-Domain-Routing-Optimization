@@ -112,8 +112,8 @@ def build_node_features(nodes: list, edges: list) -> np.ndarray:
         # [0-2] router_type one-hot
         for j, rtype in enumerate(ROUTER_TYPE_ORDER):
             feats[i, j] = 1.0 if rt == rtype else 0.0
-        # [3] capacity
-        feats[i, 3] = node["capacity_mbps"] / 1000.0
+        # [3] capacity — Group 3 generates up to ~1600 Mbps; use 2000 as ceiling
+        feats[i, 3] = node["capacity_mbps"] / 2000.0
         # [4-5] coords (already normalised by Group 3)
         feats[i, 4] = node["x_coord"]
         feats[i, 5] = node["y_coord"]

@@ -165,13 +165,13 @@ def main():
     if use_pyg:
         import torch
         torch.save(data_list, dataset_path)
-        print(f"\nSaved PyG dataset → {dataset_path}")
+        print(f"\nSaved PyG dataset -> {dataset_path}")
     else:
         import pickle
         fallback_path = os.path.join(DATASET_DIR, "gnn_dataset_fallback.pkl")
         with open(fallback_path, "wb") as f:
             pickle.dump(data_list, f)
-        print(f"\nSaved fallback dataset → {fallback_path}")
+        print(f"\nSaved fallback dataset -> {fallback_path}")
 
     # --- Save index ---
     dataset_index = {
@@ -187,7 +187,7 @@ def main():
     with open(idx_path, "w", encoding="utf-8") as f:
         json.dump(dataset_index, f, indent=2)
 
-    print(f"Saved dataset index  → {idx_path}")
+    print(f"Saved dataset index  -> {idx_path}")
     print(f"\nDataset assembly complete. {len(data_list)} graphs total.")
 
 
