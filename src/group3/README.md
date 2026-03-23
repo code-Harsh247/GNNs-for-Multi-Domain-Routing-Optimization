@@ -84,40 +84,39 @@ The pipeline runs in a single loop over all topologies. For each topology it per
 For each topology_id in 1..N:
 │
 ├── generate_topology()                     topology.py
-│     ├── Choose type from distribution (random/scale_free/mesh/ring/hybrid)
-│     ├── Build intra-domain subgraph per type
-│     ├── Connect domains with inter-domain edges (AS-like backbone)
-│     └── Assign all node/edge static attributes
+│   ├── Choose type from distribution (random/scale_free/mesh/ring/hybrid)
+│   ├── Build intra-domain subgraph per type
+│   ├── Connect domains with inter-domain edges (AS-like backbone)
+│   └── Assign all node/edge static attributes
 │
 ├── LAYER 1 - Static exports                exporters.py + latency.py
-│     ├── write_graphml()
-│     ├── write_topology_json()
-│     ├── write_nodes_csv() + write_edges_csv()
-│     └── compute_all_load_conditions() → write_label_json()
-│           Uses M/M/1 at ρ = 0.20 / 0.50 / 0.80 / 0.95
+│   ├── write_graphml()
+│   ├── write_topology_json()
+│   ├── write_nodes_csv() + write_edges_csv()
+│   └── compute_all_load_conditions() → write_label_json()
+│       Uses M/M/1 at ρ = 0.20 / 0.50 / 0.80 / 0.95
 │
 └── LAYER 2 - Temporal loop (T timesteps)   traffic.py + latency.py + exporters.py
-      For t in 0 .. T-1:
-        ├── generate_traffic_matrix()
-        │     ├── Diurnal factor (sinusoidal 24-hour curve)
-        │     ├── Flash crowd event (random burst, 8 % probability)
-        │     ├── Application profile selection (web / video / bulk)
-        │     └── Per-flow lognormal demand scaled by node history
-        │
-        ├── simulate_snapshot()
-        │     ├── Route all (src,dst) demands via shortest-path
-        │     ├── Accumulate per-link load_mbps
-        │     ├── Compute utilization, queue delay, saturation penalty
-        │     ├── Flag bottleneck edges (top-10 %, min threshold 85 %)
-        │     └── Compute end-to-end path latency + bottleneck count
-        │
-        └── write_snapshot_json() + append_snapshot_csv()
+    For t in 0 .. T-1:
+    │
+    ├── generate_traffic_matrix()
+    │   ├── Diurnal factor (sinusoidal 24-hour curve)
+    │   ├── Flash crowd event (random burst, 8 % probability)
+    │   ├── Application profile selection (web / video / bulk)
+    │   └── Per-flow lognormal demand scaled by node history
+    │
+    ├── simulate_snapshot()
+    │   ├── Route all (src,dst) demands via shortest-path
+    │   ├── Accumulate per-link load_mbps
+    │   ├── Compute utilization, queue delay, saturation penalty
+    │   ├── Flag bottleneck edges (top-10 %, min threshold 85 %)
+    │   └── Compute end-to-end path latency + bottleneck count
+    │
+    └── write_snapshot_json() + append_snapshot_csv()
 
 After all topologies:
     write_topology_index()       → topology_index.json
     all_snapshots.csv            (master flat CSV: all topologies × all timesteps)
-```
-
 ---
 
 ## 4. Output Structure
