@@ -1,0 +1,294 @@
+{
+  "topology_id": 16,
+  "num_nodes": 11,
+  "num_edges": 17,
+  "num_domains": 3,
+  "topology_type": "random",
+  "generation_seed": 1688060241,
+  "domain_policies": {
+    "0": [
+      1,
+      2
+    ],
+    "1": [
+      0,
+      2
+    ],
+    "2": [
+      0
+    ]
+  },
+  "nodes": [
+    {
+      "node_id": 0,
+      "router_type": "edge",
+      "capacity_mbps": 342.72636036520515,
+      "x_coord": 0.5349517568190035,
+      "y_coord": 0.3538178442202756,
+      "domain_id": 0,
+      "historical_traffic": 0.7781043345267704
+    },
+    {
+      "node_id": 1,
+      "router_type": "core",
+      "capacity_mbps": 939.0338233900425,
+      "x_coord": 0.6890828320579289,
+      "y_coord": 0.33872371115719907,
+      "domain_id": 0,
+      "historical_traffic": 0.22690806234236413
+    },
+    {
+      "node_id": 2,
+      "router_type": "edge",
+      "capacity_mbps": 567.8811334546847,
+      "x_coord": 0.1755717817590009,
+      "y_coord": 0.32951212682804554,
+      "domain_id": 1,
+      "historical_traffic": 0.4526374239804154
+    },
+    {
+      "node_id": 3,
+      "router_type": "core",
+      "capacity_mbps": 319.5921007353766,
+      "x_coord": 0.3974353820343165,
+      "y_coord": 0.23450123709870782,
+      "domain_id": 1,
+      "historical_traffic": 0.4721532392778479
+    },
+    {
+      "node_id": 4,
+      "router_type": "gateway",
+      "capacity_mbps": 1148.0291112727243,
+      "x_coord": 0.17259174332049498,
+      "y_coord": 0.02450673598781619,
+      "domain_id": 1,
+      "historical_traffic": 0.6252220317545907
+    },
+    {
+      "node_id": 5,
+      "router_type": "gateway",
+      "capacity_mbps": 758.1960298082265,
+      "x_coord": 0.27405045889964674,
+      "y_coord": 0.3196766166972203,
+      "domain_id": 1,
+      "historical_traffic": 0.45805094833054016
+    },
+    {
+      "node_id": 6,
+      "router_type": "core",
+      "capacity_mbps": 1476.5496903689163,
+      "x_coord": 0.2425599676305891,
+      "y_coord": 0.20575587944467444,
+      "domain_id": 1,
+      "historical_traffic": 0.687779077635368
+    },
+    {
+      "node_id": 7,
+      "router_type": "gateway",
+      "capacity_mbps": 1111.5370787561467,
+      "x_coord": 0.2065542363546085,
+      "y_coord": 0.06077149949159172,
+      "domain_id": 1,
+      "historical_traffic": 0.38217624540891093
+    },
+    {
+      "node_id": 8,
+      "router_type": "gateway",
+      "capacity_mbps": 1123.5880898379605,
+      "x_coord": 0.6259890687960372,
+      "y_coord": 0.7714749406535704,
+      "domain_id": 2,
+      "historical_traffic": 0.1441724262226386
+    },
+    {
+      "node_id": 9,
+      "router_type": "edge",
+      "capacity_mbps": 603.1470936333171,
+      "x_coord": 0.7106989728394788,
+      "y_coord": 0.7205908896083882,
+      "domain_id": 2,
+      "historical_traffic": 0.16254184029150884
+    },
+    {
+      "node_id": 10,
+      "router_type": "core",
+      "capacity_mbps": 1056.1295450654486,
+      "x_coord": 0.6822651513524639,
+      "y_coord": 0.6631291852170517,
+      "domain_id": 2,
+      "historical_traffic": 0.5972154556661134
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": 0,
+      "source": 0,
+      "target": 1,
+      "bandwidth_mbps": 622.1977481373465,
+      "propagation_delay_ms": 3.5057722176782713,
+      "is_inter_domain": false,
+      "link_reliability": 0.955703223731687,
+      "cost": 4.309375254649771
+    },
+    {
+      "edge_id": 1,
+      "source": 0,
+      "target": 2,
+      "bandwidth_mbps": 11.623294181733314,
+      "propagation_delay_ms": 8.479030280710157,
+      "is_inter_domain": true,
+      "link_reliability": 0.9479080378467559,
+      "cost": 51.49609516630681
+    },
+    {
+      "edge_id": 2,
+      "source": 2,
+      "target": 3,
+      "bandwidth_mbps": 311.14077976898125,
+      "propagation_delay_ms": 5.087907264912353,
+      "is_inter_domain": false,
+      "link_reliability": 0.9777257080296194,
+      "cost": 6.694896873832292
+    },
+    {
+      "edge_id": 3,
+      "source": 2,
+      "target": 5,
+      "bandwidth_mbps": 783.0513817140459,
+      "propagation_delay_ms": 3.967159701930389,
+      "is_inter_domain": false,
+      "link_reliability": 0.9726186289019912,
+      "cost": 4.605687404806711
+    },
+    {
+      "edge_id": 4,
+      "source": 2,
+      "target": 6,
+      "bandwidth_mbps": 971.406400836952,
+      "propagation_delay_ms": 3.5832539629429156,
+      "is_inter_domain": false,
+      "link_reliability": 0.9939164821632372,
+      "cost": 4.09797159252535
+    },
+    {
+      "edge_id": 5,
+      "source": 3,
+      "target": 5,
+      "bandwidth_mbps": 773.5782007833892,
+      "propagation_delay_ms": 3.4267897182408973,
+      "is_inter_domain": false,
+      "link_reliability": 0.9559004433504159,
+      "cost": 4.073136783726531
+    },
+    {
+      "edge_id": 6,
+      "source": 4,
+      "target": 5,
+      "bandwidth_mbps": 523.9099663334248,
+      "propagation_delay_ms": 7.110847036666964,
+      "is_inter_domain": false,
+      "link_reliability": 0.9431770315400059,
+      "cost": 8.065209488481427
+    },
+    {
+      "edge_id": 7,
+      "source": 4,
+      "target": 6,
+      "bandwidth_mbps": 993.8945143421727,
+      "propagation_delay_ms": 5.6269187765829045,
+      "is_inter_domain": false,
+      "link_reliability": 0.9687371108934881,
+      "cost": 6.129990272385388
+    },
+    {
+      "edge_id": 8,
+      "source": 4,
+      "target": 7,
+      "bandwidth_mbps": 928.8827003705471,
+      "propagation_delay_ms": 1.630994387155516,
+      "is_inter_domain": false,
+      "link_reliability": 0.9735800833210396,
+      "cost": 2.1692754852969083
+    },
+    {
+      "edge_id": 9,
+      "source": 4,
+      "target": 10,
+      "bandwidth_mbps": 18.620000693385734,
+      "propagation_delay_ms": 18.05910973222386,
+      "is_inter_domain": true,
+      "link_reliability": 0.9740134620897596,
+      "cost": 44.911955133975745
+    },
+    {
+      "edge_id": 10,
+      "source": 4,
+      "target": 8,
+      "bandwidth_mbps": 22.05911699919187,
+      "propagation_delay_ms": 19.210106899685297,
+      "is_inter_domain": true,
+      "link_reliability": 0.9597645106660033,
+      "cost": 41.87647201386088
+    },
+    {
+      "edge_id": 11,
+      "source": 5,
+      "target": 6,
+      "bandwidth_mbps": 993.4011345901492,
+      "propagation_delay_ms": 3.0002152852933435,
+      "is_inter_domain": false,
+      "link_reliability": 0.9703483458667749,
+      "cost": 3.503536635138879
+    },
+    {
+      "edge_id": 12,
+      "source": 5,
+      "target": 10,
+      "bandwidth_mbps": 36.67563853724016,
+      "propagation_delay_ms": 10.858727058860408,
+      "is_inter_domain": true,
+      "link_reliability": 0.9680091784515478,
+      "cost": 24.491754865378454
+    },
+    {
+      "edge_id": 13,
+      "source": 6,
+      "target": 7,
+      "bandwidth_mbps": 345.04412180380695,
+      "propagation_delay_ms": 4.067695604853452,
+      "is_inter_domain": false,
+      "link_reliability": 0.9599390547389893,
+      "cost": 5.516785644081251
+    },
+    {
+      "edge_id": 14,
+      "source": 7,
+      "target": 10,
+      "bandwidth_mbps": 90.03401514122216,
+      "propagation_delay_ms": 17.04174145239153,
+      "is_inter_domain": true,
+      "link_reliability": 0.9753311496643837,
+      "cost": 22.5951981011451
+    },
+    {
+      "edge_id": 15,
+      "source": 8,
+      "target": 9,
+      "bandwidth_mbps": 983.8158309288408,
+      "propagation_delay_ms": 3.8608774132870116,
+      "is_inter_domain": false,
+      "link_reliability": 0.970086910910813,
+      "cost": 4.369102615892198
+    },
+    {
+      "edge_id": 16,
+      "source": 8,
+      "target": 10,
+      "bandwidth_mbps": 173.85113433947993,
+      "propagation_delay_ms": 3.942493961545444,
+      "is_inter_domain": false,
+      "link_reliability": 0.9674256541772887,
+      "cost": 6.818517761445694
+    }
+  ]
+}
