@@ -1,177 +1,2163 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <graphml xmlns="http://graphml.graphdrawing.org/graphml">
-  <key id="node_id" for="node" attr.name="node_id" attr.type="int"/>
-  <key id="router_type" for="node" attr.name="router_type" attr.type="string"/>
-  <key id="capacity_mbps" for="node" attr.name="capacity_mbps" attr.type="double"/>
-  <key id="x_coord" for="node" attr.name="x_coord" attr.type="double"/>
-  <key id="y_coord" for="node" attr.name="y_coord" attr.type="double"/>
-  <key id="domain_id" for="node" attr.name="domain_id" attr.type="int"/>
-  <key id="edge_id" for="edge" attr.name="edge_id" attr.type="int"/>
-  <key id="bandwidth_mbps" for="edge" attr.name="bandwidth_mbps" attr.type="double"/>
-  <key id="propagation_delay_ms" for="edge" attr.name="propagation_delay_ms" attr.type="double"/>
-  <key id="is_inter_domain" for="edge" attr.name="is_inter_domain" attr.type="boolean"/>
-  <key id="link_reliability" for="edge" attr.name="link_reliability" attr.type="double"/>
-  <key id="cost" for="edge" attr.name="cost" attr.type="double"/>
+  <key id="node_id" for="node" attr.name="node_id" attr.type="int" />
+  <key id="router_type" for="node" attr.name="router_type" attr.type="string" />
+  <key id="capacity_mbps" for="node" attr.name="capacity_mbps" attr.type="double" />
+  <key id="x_coord" for="node" attr.name="x_coord" attr.type="double" />
+  <key id="y_coord" for="node" attr.name="y_coord" attr.type="double" />
+  <key id="domain_id" for="node" attr.name="domain_id" attr.type="int" />
+  <key id="historical_traffic" for="node" attr.name="historical_traffic" attr.type="double" />
+  <key id="edge_id" for="edge" attr.name="edge_id" attr.type="int" />
+  <key id="bandwidth_mbps" for="edge" attr.name="bandwidth_mbps" attr.type="double" />
+  <key id="propagation_delay_ms" for="edge" attr.name="propagation_delay_ms" attr.type="double" />
+  <key id="is_inter_domain" for="edge" attr.name="is_inter_domain" attr.type="boolean" />
+  <key id="link_reliability" for="edge" attr.name="link_reliability" attr.type="double" />
+  <key id="cost" for="edge" attr.name="cost" attr.type="double" />
+  <key id="topology_id" for="graph" attr.name="topology_id" attr.type="int" />
+  <key id="num_nodes" for="graph" attr.name="num_nodes" attr.type="int" />
+  <key id="num_edges" for="graph" attr.name="num_edges" attr.type="int" />
+  <key id="num_domains" for="graph" attr.name="num_domains" attr.type="int" />
+  <key id="topology_type" for="graph" attr.name="topology_type" attr.type="string" />
+  <key id="generation_seed" for="graph" attr.name="generation_seed" attr.type="int" />
+  <key id="domain_policies" for="graph" attr.name="domain_policies" attr.type="string" />
   <graph id="topology_004" edgedefault="undirected">
+    <data key="topology_id">4</data>
+    <data key="num_nodes">67</data>
+    <data key="num_edges">191</data>
+    <data key="num_domains">3</data>
+    <data key="topology_type">random</data>
+    <data key="generation_seed">942484272</data>
+    <data key="domain_policies">{"0": [1, 2], "1": [0, 2], "2": [0, 1]}</data>
     <node id="0">
       <data key="node_id">0</data>
       <data key="router_type">core</data>
-      <data key="capacity_mbps">250.0</data>
-      <data key="x_coord">0.15</data>
-      <data key="y_coord">0.7394</data>
+      <data key="capacity_mbps">1307.154225</data>
+      <data key="x_coord">0.233802</data>
+      <data key="y_coord">0.796943</data>
       <data key="domain_id">0</data>
+      <data key="historical_traffic">0.200881</data>
     </node>
     <node id="1">
       <data key="node_id">1</data>
-      <data key="router_type">core</data>
-      <data key="capacity_mbps">250.0</data>
-      <data key="x_coord">0.3019</data>
-      <data key="y_coord">0.3516</data>
-      <data key="domain_id">1</data>
+      <data key="router_type">edge</data>
+      <data key="capacity_mbps">620.916457</data>
+      <data key="x_coord">0.206307</data>
+      <data key="y_coord">0.833075</data>
+      <data key="domain_id">0</data>
+      <data key="historical_traffic">0.228384</data>
     </node>
     <node id="2">
       <data key="node_id">2</data>
       <data key="router_type">gateway</data>
-      <data key="capacity_mbps">1000.0</data>
-      <data key="x_coord">0.5406</data>
-      <data key="y_coord">0.3879</data>
+      <data key="capacity_mbps">1003.326041</data>
+      <data key="x_coord">0.278013</data>
+      <data key="y_coord">0.860823</data>
       <data key="domain_id">0</data>
+      <data key="historical_traffic">0.259904</data>
     </node>
     <node id="3">
       <data key="node_id">3</data>
-      <data key="router_type">edge</data>
-      <data key="capacity_mbps">500.0</data>
-      <data key="x_coord">0.7191</data>
-      <data key="y_coord">0.4289</data>
-      <data key="domain_id">1</data>
+      <data key="router_type">gateway</data>
+      <data key="capacity_mbps">524.962135</data>
+      <data key="x_coord">0.234200</data>
+      <data key="y_coord">0.860371</data>
+      <data key="domain_id">0</data>
+      <data key="historical_traffic">0.713679</data>
     </node>
     <node id="4">
       <data key="node_id">4</data>
-      <data key="router_type">gateway</data>
-      <data key="capacity_mbps">100.0</data>
-      <data key="x_coord">0.6325</data>
-      <data key="y_coord">0.041</data>
+      <data key="router_type">core</data>
+      <data key="capacity_mbps">475.739894</data>
+      <data key="x_coord">0.043834</data>
+      <data key="y_coord">0.988174</data>
       <data key="domain_id">0</data>
+      <data key="historical_traffic">0.262179</data>
     </node>
     <node id="5">
       <data key="node_id">5</data>
-      <data key="router_type">core</data>
-      <data key="capacity_mbps">100.0</data>
-      <data key="x_coord">0.5703</data>
-      <data key="y_coord">0.8379</data>
-      <data key="domain_id">1</data>
+      <data key="router_type">edge</data>
+      <data key="capacity_mbps">350.286445</data>
+      <data key="x_coord">0.179048</data>
+      <data key="y_coord">0.858777</data>
+      <data key="domain_id">0</data>
+      <data key="historical_traffic">0.627762</data>
     </node>
     <node id="6">
       <data key="node_id">6</data>
-      <data key="router_type">core</data>
-      <data key="capacity_mbps">1000.0</data>
-      <data key="x_coord">0.2317</data>
-      <data key="y_coord">0.502</data>
+      <data key="router_type">gateway</data>
+      <data key="capacity_mbps">575.514277</data>
+      <data key="x_coord">0.179187</data>
+      <data key="y_coord">0.940089</data>
       <data key="domain_id">0</data>
+      <data key="historical_traffic">0.501749</data>
     </node>
     <node id="7">
       <data key="node_id">7</data>
-      <data key="router_type">gateway</data>
-      <data key="capacity_mbps">1000.0</data>
-      <data key="x_coord">0.1951</data>
-      <data key="y_coord">0.7646</data>
-      <data key="domain_id">1</data>
+      <data key="router_type">edge</data>
+      <data key="capacity_mbps">665.728667</data>
+      <data key="x_coord">0.204702</data>
+      <data key="y_coord">0.819722</data>
+      <data key="domain_id">0</data>
+      <data key="historical_traffic">0.736661</data>
     </node>
     <node id="8">
       <data key="node_id">8</data>
-      <data key="router_type">edge</data>
-      <data key="capacity_mbps">250.0</data>
-      <data key="x_coord">0.3057</data>
-      <data key="y_coord">0.8295</data>
+      <data key="router_type">gateway</data>
+      <data key="capacity_mbps">783.236072</data>
+      <data key="x_coord">0.305789</data>
+      <data key="y_coord">0.939551</data>
       <data key="domain_id">0</data>
+      <data key="historical_traffic">0.423171</data>
     </node>
     <node id="9">
       <data key="node_id">9</data>
-      <data key="router_type">core</data>
-      <data key="capacity_mbps">1000.0</data>
-      <data key="x_coord">0.3105</data>
-      <data key="y_coord">0.3623</data>
-      <data key="domain_id">1</data>
+      <data key="router_type">edge</data>
+      <data key="capacity_mbps">566.640378</data>
+      <data key="x_coord">0.080137</data>
+      <data key="y_coord">0.823669</data>
+      <data key="domain_id">0</data>
+      <data key="historical_traffic">0.320103</data>
     </node>
-    <edge id="e0" source="0" target="1">
+    <node id="10">
+      <data key="node_id">10</data>
+      <data key="router_type">gateway</data>
+      <data key="capacity_mbps">696.904353</data>
+      <data key="x_coord">0.243306</data>
+      <data key="y_coord">0.892493</data>
+      <data key="domain_id">0</data>
+      <data key="historical_traffic">0.285492</data>
+    </node>
+    <node id="11">
+      <data key="node_id">11</data>
+      <data key="router_type">edge</data>
+      <data key="capacity_mbps">174.418654</data>
+      <data key="x_coord">0.159628</data>
+      <data key="y_coord">0.835099</data>
+      <data key="domain_id">0</data>
+      <data key="historical_traffic">0.291133</data>
+    </node>
+    <node id="12">
+      <data key="node_id">12</data>
+      <data key="router_type">edge</data>
+      <data key="capacity_mbps">597.969584</data>
+      <data key="x_coord">0.192520</data>
+      <data key="y_coord">0.797146</data>
+      <data key="domain_id">0</data>
+      <data key="historical_traffic">0.517152</data>
+    </node>
+    <node id="13">
+      <data key="node_id">13</data>
+      <data key="router_type">edge</data>
+      <data key="capacity_mbps">274.515554</data>
+      <data key="x_coord">0.157253</data>
+      <data key="y_coord">0.791991</data>
+      <data key="domain_id">0</data>
+      <data key="historical_traffic">0.207613</data>
+    </node>
+    <node id="14">
+      <data key="node_id">14</data>
+      <data key="router_type">edge</data>
+      <data key="capacity_mbps">464.625046</data>
+      <data key="x_coord">0.220266</data>
+      <data key="y_coord">0.826866</data>
+      <data key="domain_id">0</data>
+      <data key="historical_traffic">0.539813</data>
+    </node>
+    <node id="15">
+      <data key="node_id">15</data>
+      <data key="router_type">core</data>
+      <data key="capacity_mbps">570.813662</data>
+      <data key="x_coord">0.106807</data>
+      <data key="y_coord">0.893244</data>
+      <data key="domain_id">0</data>
+      <data key="historical_traffic">0.239271</data>
+    </node>
+    <node id="16">
+      <data key="node_id">16</data>
+      <data key="router_type">core</data>
+      <data key="capacity_mbps">826.157212</data>
+      <data key="x_coord">0.090081</data>
+      <data key="y_coord">0.783967</data>
+      <data key="domain_id">0</data>
+      <data key="historical_traffic">0.284032</data>
+    </node>
+    <node id="17">
+      <data key="node_id">17</data>
+      <data key="router_type">edge</data>
+      <data key="capacity_mbps">238.137988</data>
+      <data key="x_coord">0.088658</data>
+      <data key="y_coord">0.832192</data>
+      <data key="domain_id">0</data>
+      <data key="historical_traffic">0.528335</data>
+    </node>
+    <node id="18">
+      <data key="node_id">18</data>
+      <data key="router_type">edge</data>
+      <data key="capacity_mbps">547.079044</data>
+      <data key="x_coord">0.274730</data>
+      <data key="y_coord">0.836752</data>
+      <data key="domain_id">0</data>
+      <data key="historical_traffic">0.593779</data>
+    </node>
+    <node id="19">
+      <data key="node_id">19</data>
+      <data key="router_type">core</data>
+      <data key="capacity_mbps">889.934855</data>
+      <data key="x_coord">0.213842</data>
+      <data key="y_coord">0.953989</data>
+      <data key="domain_id">0</data>
+      <data key="historical_traffic">0.520901</data>
+    </node>
+    <node id="20">
+      <data key="node_id">20</data>
+      <data key="router_type">edge</data>
+      <data key="capacity_mbps">100.400495</data>
+      <data key="x_coord">0.172812</data>
+      <data key="y_coord">0.789906</data>
+      <data key="domain_id">0</data>
+      <data key="historical_traffic">0.413145</data>
+    </node>
+    <node id="21">
+      <data key="node_id">21</data>
+      <data key="router_type">edge</data>
+      <data key="capacity_mbps">282.101005</data>
+      <data key="x_coord">0.306223</data>
+      <data key="y_coord">0.881571</data>
+      <data key="domain_id">0</data>
+      <data key="historical_traffic">0.792383</data>
+    </node>
+    <node id="22">
+      <data key="node_id">22</data>
+      <data key="router_type">edge</data>
+      <data key="capacity_mbps">100.000000</data>
+      <data key="x_coord">0.665484</data>
+      <data key="y_coord">0.223190</data>
+      <data key="domain_id">1</data>
+      <data key="historical_traffic">0.578853</data>
+    </node>
+    <node id="23">
+      <data key="node_id">23</data>
+      <data key="router_type">core</data>
+      <data key="capacity_mbps">358.706984</data>
+      <data key="x_coord">0.631682</data>
+      <data key="y_coord">0.186849</data>
+      <data key="domain_id">1</data>
+      <data key="historical_traffic">0.230726</data>
+    </node>
+    <node id="24">
+      <data key="node_id">24</data>
+      <data key="router_type">gateway</data>
+      <data key="capacity_mbps">540.317455</data>
+      <data key="x_coord">0.622619</data>
+      <data key="y_coord">0.189694</data>
+      <data key="domain_id">1</data>
+      <data key="historical_traffic">0.624555</data>
+    </node>
+    <node id="25">
+      <data key="node_id">25</data>
+      <data key="router_type">edge</data>
+      <data key="capacity_mbps">196.724682</data>
+      <data key="x_coord">0.711205</data>
+      <data key="y_coord">0.245222</data>
+      <data key="domain_id">1</data>
+      <data key="historical_traffic">0.201314</data>
+    </node>
+    <node id="26">
+      <data key="node_id">26</data>
+      <data key="router_type">edge</data>
+      <data key="capacity_mbps">159.572263</data>
+      <data key="x_coord">0.722834</data>
+      <data key="y_coord">0.248263</data>
+      <data key="domain_id">1</data>
+      <data key="historical_traffic">0.493549</data>
+    </node>
+    <node id="27">
+      <data key="node_id">27</data>
+      <data key="router_type">edge</data>
+      <data key="capacity_mbps">442.330067</data>
+      <data key="x_coord">0.789892</data>
+      <data key="y_coord">0.409746</data>
+      <data key="domain_id">1</data>
+      <data key="historical_traffic">0.329958</data>
+    </node>
+    <node id="28">
+      <data key="node_id">28</data>
+      <data key="router_type">gateway</data>
+      <data key="capacity_mbps">802.481980</data>
+      <data key="x_coord">0.630207</data>
+      <data key="y_coord">0.255273</data>
+      <data key="domain_id">1</data>
+      <data key="historical_traffic">0.669775</data>
+    </node>
+    <node id="29">
+      <data key="node_id">29</data>
+      <data key="router_type">edge</data>
+      <data key="capacity_mbps">483.168055</data>
+      <data key="x_coord">0.673596</data>
+      <data key="y_coord">0.189563</data>
+      <data key="domain_id">1</data>
+      <data key="historical_traffic">0.427135</data>
+    </node>
+    <node id="30">
+      <data key="node_id">30</data>
+      <data key="router_type">edge</data>
+      <data key="capacity_mbps">570.503937</data>
+      <data key="x_coord">0.637853</data>
+      <data key="y_coord">0.162839</data>
+      <data key="domain_id">1</data>
+      <data key="historical_traffic">0.403041</data>
+    </node>
+    <node id="31">
+      <data key="node_id">31</data>
+      <data key="router_type">gateway</data>
+      <data key="capacity_mbps">555.309076</data>
+      <data key="x_coord">0.765717</data>
+      <data key="y_coord">0.160956</data>
+      <data key="domain_id">1</data>
+      <data key="historical_traffic">0.334741</data>
+    </node>
+    <node id="32">
+      <data key="node_id">32</data>
+      <data key="router_type">edge</data>
+      <data key="capacity_mbps">769.219030</data>
+      <data key="x_coord">0.681098</data>
+      <data key="y_coord">0.292273</data>
+      <data key="domain_id">1</data>
+      <data key="historical_traffic">0.159739</data>
+    </node>
+    <node id="33">
+      <data key="node_id">33</data>
+      <data key="router_type">edge</data>
+      <data key="capacity_mbps">617.588469</data>
+      <data key="x_coord">0.826627</data>
+      <data key="y_coord">0.090429</data>
+      <data key="domain_id">1</data>
+      <data key="historical_traffic">0.707305</data>
+    </node>
+    <node id="34">
+      <data key="node_id">34</data>
+      <data key="router_type">edge</data>
+      <data key="capacity_mbps">631.771061</data>
+      <data key="x_coord">0.750672</data>
+      <data key="y_coord">0.127784</data>
+      <data key="domain_id">1</data>
+      <data key="historical_traffic">0.627666</data>
+    </node>
+    <node id="35">
+      <data key="node_id">35</data>
+      <data key="router_type">edge</data>
+      <data key="capacity_mbps">615.937093</data>
+      <data key="x_coord">0.664478</data>
+      <data key="y_coord">0.000000</data>
+      <data key="domain_id">1</data>
+      <data key="historical_traffic">0.576085</data>
+    </node>
+    <node id="36">
+      <data key="node_id">36</data>
+      <data key="router_type">gateway</data>
+      <data key="capacity_mbps">383.811582</data>
+      <data key="x_coord">0.646371</data>
+      <data key="y_coord">0.307901</data>
+      <data key="domain_id">1</data>
+      <data key="historical_traffic">0.396396</data>
+    </node>
+    <node id="37">
+      <data key="node_id">37</data>
+      <data key="router_type">gateway</data>
+      <data key="capacity_mbps">1035.701944</data>
+      <data key="x_coord">0.618526</data>
+      <data key="y_coord">0.250656</data>
+      <data key="domain_id">1</data>
+      <data key="historical_traffic">0.350081</data>
+    </node>
+    <node id="38">
+      <data key="node_id">38</data>
+      <data key="router_type">edge</data>
+      <data key="capacity_mbps">496.066717</data>
+      <data key="x_coord">0.744935</data>
+      <data key="y_coord">0.244193</data>
+      <data key="domain_id">1</data>
+      <data key="historical_traffic">0.693772</data>
+    </node>
+    <node id="39">
+      <data key="node_id">39</data>
+      <data key="router_type">edge</data>
+      <data key="capacity_mbps">695.350853</data>
+      <data key="x_coord">0.820296</data>
+      <data key="y_coord">0.326029</data>
+      <data key="domain_id">1</data>
+      <data key="historical_traffic">0.663995</data>
+    </node>
+    <node id="40">
+      <data key="node_id">40</data>
+      <data key="router_type">edge</data>
+      <data key="capacity_mbps">160.186284</data>
+      <data key="x_coord">0.837386</data>
+      <data key="y_coord">0.146204</data>
+      <data key="domain_id">1</data>
+      <data key="historical_traffic">0.664704</data>
+    </node>
+    <node id="41">
+      <data key="node_id">41</data>
+      <data key="router_type">gateway</data>
+      <data key="capacity_mbps">154.363773</data>
+      <data key="x_coord">0.710563</data>
+      <data key="y_coord">0.244631</data>
+      <data key="domain_id">1</data>
+      <data key="historical_traffic">0.222793</data>
+    </node>
+    <node id="42">
+      <data key="node_id">42</data>
+      <data key="router_type">edge</data>
+      <data key="capacity_mbps">664.134385</data>
+      <data key="x_coord">0.892029</data>
+      <data key="y_coord">0.255093</data>
+      <data key="domain_id">1</data>
+      <data key="historical_traffic">0.503200</data>
+    </node>
+    <node id="43">
+      <data key="node_id">43</data>
+      <data key="router_type">core</data>
+      <data key="capacity_mbps">1402.058923</data>
+      <data key="x_coord">0.706815</data>
+      <data key="y_coord">0.125606</data>
+      <data key="domain_id">1</data>
+      <data key="historical_traffic">0.556028</data>
+    </node>
+    <node id="44">
+      <data key="node_id">44</data>
+      <data key="router_type">core</data>
+      <data key="capacity_mbps">830.434999</data>
+      <data key="x_coord">0.507821</data>
+      <data key="y_coord">0.803269</data>
+      <data key="domain_id">2</data>
+      <data key="historical_traffic">0.642563</data>
+    </node>
+    <node id="45">
+      <data key="node_id">45</data>
+      <data key="router_type">gateway</data>
+      <data key="capacity_mbps">850.310795</data>
+      <data key="x_coord">0.347129</data>
+      <data key="y_coord">0.835625</data>
+      <data key="domain_id">2</data>
+      <data key="historical_traffic">0.182815</data>
+    </node>
+    <node id="46">
+      <data key="node_id">46</data>
+      <data key="router_type">gateway</data>
+      <data key="capacity_mbps">853.376811</data>
+      <data key="x_coord">0.536769</data>
+      <data key="y_coord">0.847008</data>
+      <data key="domain_id">2</data>
+      <data key="historical_traffic">0.133551</data>
+    </node>
+    <node id="47">
+      <data key="node_id">47</data>
+      <data key="router_type">edge</data>
+      <data key="capacity_mbps">508.951280</data>
+      <data key="x_coord">0.450923</data>
+      <data key="y_coord">0.753885</data>
+      <data key="domain_id">2</data>
+      <data key="historical_traffic">0.310415</data>
+    </node>
+    <node id="48">
+      <data key="node_id">48</data>
+      <data key="router_type">gateway</data>
+      <data key="capacity_mbps">791.372971</data>
+      <data key="x_coord">0.461148</data>
+      <data key="y_coord">0.787030</data>
+      <data key="domain_id">2</data>
+      <data key="historical_traffic">0.420796</data>
+    </node>
+    <node id="49">
+      <data key="node_id">49</data>
+      <data key="router_type">core</data>
+      <data key="capacity_mbps">1393.668031</data>
+      <data key="x_coord">0.416118</data>
+      <data key="y_coord">0.800155</data>
+      <data key="domain_id">2</data>
+      <data key="historical_traffic">0.663720</data>
+    </node>
+    <node id="50">
+      <data key="node_id">50</data>
+      <data key="router_type">edge</data>
+      <data key="capacity_mbps">100.000000</data>
+      <data key="x_coord">0.546204</data>
+      <data key="y_coord">0.930024</data>
+      <data key="domain_id">2</data>
+      <data key="historical_traffic">0.638949</data>
+    </node>
+    <node id="51">
+      <data key="node_id">51</data>
+      <data key="router_type">core</data>
+      <data key="capacity_mbps">544.864310</data>
+      <data key="x_coord">0.574779</data>
+      <data key="y_coord">0.849900</data>
+      <data key="domain_id">2</data>
+      <data key="historical_traffic">0.235790</data>
+    </node>
+    <node id="52">
+      <data key="node_id">52</data>
+      <data key="router_type">edge</data>
+      <data key="capacity_mbps">540.702498</data>
+      <data key="x_coord">0.629655</data>
+      <data key="y_coord">0.846310</data>
+      <data key="domain_id">2</data>
+      <data key="historical_traffic">0.714119</data>
+    </node>
+    <node id="53">
+      <data key="node_id">53</data>
+      <data key="router_type">edge</data>
+      <data key="capacity_mbps">194.436126</data>
+      <data key="x_coord">0.400092</data>
+      <data key="y_coord">0.737896</data>
+      <data key="domain_id">2</data>
+      <data key="historical_traffic">0.233010</data>
+    </node>
+    <node id="54">
+      <data key="node_id">54</data>
+      <data key="router_type">edge</data>
+      <data key="capacity_mbps">752.410850</data>
+      <data key="x_coord">0.522847</data>
+      <data key="y_coord">0.684904</data>
+      <data key="domain_id">2</data>
+      <data key="historical_traffic">0.562338</data>
+    </node>
+    <node id="55">
+      <data key="node_id">55</data>
+      <data key="router_type">edge</data>
+      <data key="capacity_mbps">616.680418</data>
+      <data key="x_coord">0.448683</data>
+      <data key="y_coord">0.839762</data>
+      <data key="domain_id">2</data>
+      <data key="historical_traffic">0.682099</data>
+    </node>
+    <node id="56">
+      <data key="node_id">56</data>
+      <data key="router_type">edge</data>
+      <data key="capacity_mbps">566.525477</data>
+      <data key="x_coord">0.333617</data>
+      <data key="y_coord">0.710197</data>
+      <data key="domain_id">2</data>
+      <data key="historical_traffic">0.273003</data>
+    </node>
+    <node id="57">
+      <data key="node_id">57</data>
+      <data key="router_type">gateway</data>
+      <data key="capacity_mbps">838.068729</data>
+      <data key="x_coord">0.262442</data>
+      <data key="y_coord">0.793986</data>
+      <data key="domain_id">2</data>
+      <data key="historical_traffic">0.185189</data>
+    </node>
+    <node id="58">
+      <data key="node_id">58</data>
+      <data key="router_type">edge</data>
+      <data key="capacity_mbps">149.604812</data>
+      <data key="x_coord">0.364815</data>
+      <data key="y_coord">0.893061</data>
+      <data key="domain_id">2</data>
+      <data key="historical_traffic">0.778201</data>
+    </node>
+    <node id="59">
+      <data key="node_id">59</data>
+      <data key="router_type">edge</data>
+      <data key="capacity_mbps">635.800097</data>
+      <data key="x_coord">0.518495</data>
+      <data key="y_coord">0.731067</data>
+      <data key="domain_id">2</data>
+      <data key="historical_traffic">0.394025</data>
+    </node>
+    <node id="60">
+      <data key="node_id">60</data>
+      <data key="router_type">gateway</data>
+      <data key="capacity_mbps">293.094685</data>
+      <data key="x_coord">0.391323</data>
+      <data key="y_coord">0.864157</data>
+      <data key="domain_id">2</data>
+      <data key="historical_traffic">0.400161</data>
+    </node>
+    <node id="61">
+      <data key="node_id">61</data>
+      <data key="router_type">edge</data>
+      <data key="capacity_mbps">237.665611</data>
+      <data key="x_coord">0.336068</data>
+      <data key="y_coord">0.938045</data>
+      <data key="domain_id">2</data>
+      <data key="historical_traffic">0.735096</data>
+    </node>
+    <node id="62">
+      <data key="node_id">62</data>
+      <data key="router_type">gateway</data>
+      <data key="capacity_mbps">958.054481</data>
+      <data key="x_coord">0.420071</data>
+      <data key="y_coord">0.812694</data>
+      <data key="domain_id">2</data>
+      <data key="historical_traffic">0.579941</data>
+    </node>
+    <node id="63">
+      <data key="node_id">63</data>
+      <data key="router_type">gateway</data>
+      <data key="capacity_mbps">1194.715200</data>
+      <data key="x_coord">0.456403</data>
+      <data key="y_coord">0.751740</data>
+      <data key="domain_id">2</data>
+      <data key="historical_traffic">0.539020</data>
+    </node>
+    <node id="64">
+      <data key="node_id">64</data>
+      <data key="router_type">edge</data>
+      <data key="capacity_mbps">135.030385</data>
+      <data key="x_coord">0.411142</data>
+      <data key="y_coord">0.743121</data>
+      <data key="domain_id">2</data>
+      <data key="historical_traffic">0.140059</data>
+    </node>
+    <node id="65">
+      <data key="node_id">65</data>
+      <data key="router_type">gateway</data>
+      <data key="capacity_mbps">283.675594</data>
+      <data key="x_coord">0.662729</data>
+      <data key="y_coord">0.830651</data>
+      <data key="domain_id">2</data>
+      <data key="historical_traffic">0.150056</data>
+    </node>
+    <node id="66">
+      <data key="node_id">66</data>
+      <data key="router_type">gateway</data>
+      <data key="capacity_mbps">1192.342793</data>
+      <data key="x_coord">0.459282</data>
+      <data key="y_coord">0.808538</data>
+      <data key="domain_id">2</data>
+      <data key="historical_traffic">0.142641</data>
+    </node>
+    <edge id="e0" source="0" target="3">
       <data key="edge_id">0</data>
-      <data key="bandwidth_mbps">28.28</data>
-      <data key="propagation_delay_ms">9.89</data>
-      <data key="is_inter_domain">true</data>
-      <data key="link_reliability">0.9921</data>
-      <data key="cost">2.99</data>
+      <data key="bandwidth_mbps">584.811467</data>
+      <data key="propagation_delay_ms">2.668462</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.944228</data>
+      <data key="cost">3.523439</data>
     </edge>
-    <edge id="e1" source="0" target="9">
+    <edge id="e1" source="0" target="7">
       <data key="edge_id">1</data>
-      <data key="bandwidth_mbps">59.86</data>
-      <data key="propagation_delay_ms">9.36</data>
-      <data key="is_inter_domain">true</data>
-      <data key="link_reliability">0.9651</data>
-      <data key="cost">2.17</data>
+      <data key="bandwidth_mbps">484.769737</data>
+      <data key="propagation_delay_ms">1.821869</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.947182</data>
+      <data key="cost">2.853286</data>
     </edge>
-    <edge id="e2" source="1" target="2">
+    <edge id="e2" source="0" target="9">
       <data key="edge_id">2</data>
-      <data key="bandwidth_mbps">72.81</data>
-      <data key="propagation_delay_ms">8.89</data>
-      <data key="is_inter_domain">true</data>
-      <data key="link_reliability">0.9735</data>
-      <data key="cost">6.42</data>
+      <data key="bandwidth_mbps">443.982012</data>
+      <data key="propagation_delay_ms">4.581450</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.961525</data>
+      <data key="cost">5.707621</data>
     </edge>
-    <edge id="e3" source="2" target="3">
+    <edge id="e3" source="0" target="11">
       <data key="edge_id">3</data>
-      <data key="bandwidth_mbps">19.63</data>
-      <data key="propagation_delay_ms">16.54</data>
-      <data key="is_inter_domain">true</data>
-      <data key="link_reliability">0.9945</data>
-      <data key="cost">3.29</data>
+      <data key="bandwidth_mbps">260.796665</data>
+      <data key="propagation_delay_ms">2.629206</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.980028</data>
+      <data key="cost">4.546408</data>
     </edge>
-    <edge id="e4" source="3" target="4">
+    <edge id="e4" source="0" target="13">
       <data key="edge_id">4</data>
-      <data key="bandwidth_mbps">83.44</data>
-      <data key="propagation_delay_ms">14.28</data>
-      <data key="is_inter_domain">true</data>
-      <data key="link_reliability">0.9649</data>
-      <data key="cost">3.43</data>
+      <data key="bandwidth_mbps">522.921900</data>
+      <data key="propagation_delay_ms">2.180910</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.974299</data>
+      <data key="cost">3.137076</data>
     </edge>
-    <edge id="e5" source="4" target="5">
+    <edge id="e5" source="0" target="15">
       <data key="edge_id">5</data>
-      <data key="bandwidth_mbps">17.55</data>
-      <data key="propagation_delay_ms">8.87</data>
-      <data key="is_inter_domain">true</data>
-      <data key="link_reliability">0.9726</data>
-      <data key="cost">5.38</data>
+      <data key="bandwidth_mbps">760.611143</data>
+      <data key="propagation_delay_ms">3.439469</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.978826</data>
+      <data key="cost">4.096835</data>
     </edge>
-    <edge id="e6" source="5" target="6">
+    <edge id="e6" source="0" target="17">
       <data key="edge_id">6</data>
-      <data key="bandwidth_mbps">53.34</data>
-      <data key="propagation_delay_ms">11.42</data>
-      <data key="is_inter_domain">true</data>
-      <data key="link_reliability">0.9562</data>
-      <data key="cost">3.02</data>
+      <data key="bandwidth_mbps">825.048956</data>
+      <data key="propagation_delay_ms">3.725895</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.969909</data>
+      <data key="cost">4.331920</data>
     </edge>
-    <edge id="e7" source="6" target="7">
+    <edge id="e7" source="0" target="20">
       <data key="edge_id">7</data>
-      <data key="bandwidth_mbps">60.32</data>
-      <data key="propagation_delay_ms">9.98</data>
-      <data key="is_inter_domain">true</data>
-      <data key="link_reliability">0.9587</data>
-      <data key="cost">3.49</data>
+      <data key="bandwidth_mbps">394.063295</data>
+      <data key="propagation_delay_ms">2.009727</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.965511</data>
+      <data key="cost">3.278559</data>
     </edge>
-    <edge id="e8" source="7" target="8">
+    <edge id="e8" source="0" target="53">
       <data key="edge_id">8</data>
-      <data key="bandwidth_mbps">98.12</data>
-      <data key="propagation_delay_ms">16.18</data>
+      <data key="bandwidth_mbps">31.081928</data>
+      <data key="propagation_delay_ms">4.561558</data>
       <data key="is_inter_domain">true</data>
-      <data key="link_reliability">0.9863</data>
-      <data key="cost">4.2</data>
+      <data key="link_reliability">0.996124</data>
+      <data key="cost">20.648076</data>
     </edge>
-    <edge id="e9" source="8" target="9">
+    <edge id="e9" source="1" target="3">
       <data key="edge_id">9</data>
-      <data key="bandwidth_mbps">47.67</data>
-      <data key="propagation_delay_ms">14.39</data>
+      <data key="bandwidth_mbps">928.419194</data>
+      <data key="propagation_delay_ms">2.525756</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.944384</data>
+      <data key="cost">3.064306</data>
+    </edge>
+    <edge id="e10" source="1" target="5">
+      <data key="edge_id">10</data>
+      <data key="bandwidth_mbps">301.326332</data>
+      <data key="propagation_delay_ms">1.512032</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.984257</data>
+      <data key="cost">3.171363</data>
+    </edge>
+    <edge id="e11" source="1" target="8">
+      <data key="edge_id">11</data>
+      <data key="bandwidth_mbps">286.652885</data>
+      <data key="propagation_delay_ms">3.119487</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.953271</data>
+      <data key="cost">4.863757</data>
+    </edge>
+    <edge id="e12" source="1" target="20">
+      <data key="edge_id">12</data>
+      <data key="bandwidth_mbps">169.380352</data>
+      <data key="propagation_delay_ms">2.886937</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.996600</data>
+      <data key="cost">5.838874</data>
+    </edge>
+    <edge id="e13" source="1" target="21">
+      <data key="edge_id">13</data>
+      <data key="bandwidth_mbps">697.990209</data>
+      <data key="propagation_delay_ms">3.376331</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.947891</data>
+      <data key="cost">4.092673</data>
+    </edge>
+    <edge id="e14" source="2" target="4">
+      <data key="edge_id">14</data>
+      <data key="bandwidth_mbps">110.097020</data>
+      <data key="propagation_delay_ms">5.577897</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.940192</data>
+      <data key="cost">10.119346</data>
+    </edge>
+    <edge id="e15" source="2" target="7">
+      <data key="edge_id">15</data>
+      <data key="bandwidth_mbps">593.590215</data>
+      <data key="propagation_delay_ms">2.503032</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.979786</data>
+      <data key="cost">3.345364</data>
+    </edge>
+    <edge id="e16" source="2" target="9">
+      <data key="edge_id">16</data>
+      <data key="bandwidth_mbps">326.065968</data>
+      <data key="propagation_delay_ms">6.006272</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.996611</data>
+      <data key="cost">7.539704</data>
+    </edge>
+    <edge id="e17" source="2" target="17">
+      <data key="edge_id">17</data>
+      <data key="bandwidth_mbps">970.159263</data>
+      <data key="propagation_delay_ms">4.701353</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.992068</data>
+      <data key="cost">5.216732</data>
+    </edge>
+    <edge id="e18" source="3" target="16">
+      <data key="edge_id">18</data>
+      <data key="bandwidth_mbps">525.734908</data>
+      <data key="propagation_delay_ms">4.136732</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.945522</data>
+      <data key="cost">5.087782</data>
+    </edge>
+    <edge id="e19" source="3" target="18">
+      <data key="edge_id">19</data>
+      <data key="bandwidth_mbps">304.545083</data>
+      <data key="propagation_delay_ms">2.422075</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.994935</data>
+      <data key="cost">4.063868</data>
+    </edge>
+    <edge id="e20" source="3" target="51">
+      <data key="edge_id">20</data>
+      <data key="bandwidth_mbps">94.930263</data>
+      <data key="propagation_delay_ms">8.615622</data>
       <data key="is_inter_domain">true</data>
-      <data key="link_reliability">0.9781</data>
-      <data key="cost">6.76</data>
+      <data key="link_reliability">0.953009</data>
+      <data key="cost">13.882646</data>
+    </edge>
+    <edge id="e21" source="4" target="5">
+      <data key="edge_id">21</data>
+      <data key="bandwidth_mbps">372.889212</data>
+      <data key="propagation_delay_ms">3.897026</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.943581</data>
+      <data key="cost">5.237906</data>
+    </edge>
+    <edge id="e22" source="4" target="15">
+      <data key="edge_id">22</data>
+      <data key="bandwidth_mbps">771.365624</data>
+      <data key="propagation_delay_ms">3.975349</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.979176</data>
+      <data key="cost">4.623550</data>
+    </edge>
+    <edge id="e23" source="4" target="19">
+      <data key="edge_id">23</data>
+      <data key="bandwidth_mbps">771.572505</data>
+      <data key="propagation_delay_ms">3.928482</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.978656</data>
+      <data key="cost">4.576509</data>
+    </edge>
+    <edge id="e24" source="5" target="9">
+      <data key="edge_id">24</data>
+      <data key="bandwidth_mbps">248.236909</data>
+      <data key="propagation_delay_ms">2.957325</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.941362</data>
+      <data key="cost">4.971530</data>
+    </edge>
+    <edge id="e25" source="5" target="11">
+      <data key="edge_id">25</data>
+      <data key="bandwidth_mbps">248.873157</data>
+      <data key="propagation_delay_ms">1.377671</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.950741</data>
+      <data key="cost">3.386726</data>
+    </edge>
+    <edge id="e26" source="5" target="13">
+      <data key="edge_id">26</data>
+      <data key="bandwidth_mbps">799.355785</data>
+      <data key="propagation_delay_ms">2.279931</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.971034</data>
+      <data key="cost">2.905434</data>
+    </edge>
+    <edge id="e27" source="5" target="14">
+      <data key="edge_id">27</data>
+      <data key="bandwidth_mbps">538.618066</data>
+      <data key="propagation_delay_ms">1.953629</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.980171</data>
+      <data key="cost">2.881930</data>
+    </edge>
+    <edge id="e28" source="5" target="25">
+      <data key="edge_id">28</data>
+      <data key="bandwidth_mbps">87.241696</data>
+      <data key="propagation_delay_ms">17.539110</data>
+      <data key="is_inter_domain">true</data>
+      <data key="link_reliability">0.946181</data>
+      <data key="cost">23.270315</data>
+    </edge>
+    <edge id="e29" source="6" target="9">
+      <data key="edge_id">29</data>
+      <data key="bandwidth_mbps">432.817292</data>
+      <data key="propagation_delay_ms">4.804116</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.981934</data>
+      <data key="cost">5.959338</data>
+    </edge>
+    <edge id="e30" source="6" target="10">
+      <data key="edge_id">30</data>
+      <data key="bandwidth_mbps">338.914009</data>
+      <data key="propagation_delay_ms">1.788148</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.952006</data>
+      <data key="cost">3.263449</data>
+    </edge>
+    <edge id="e31" source="6" target="20">
+      <data key="edge_id">31</data>
+      <data key="bandwidth_mbps">733.987388</data>
+      <data key="propagation_delay_ms">4.785406</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.947608</data>
+      <data key="cost">5.466616</data>
+    </edge>
+    <edge id="e32" source="7" target="9">
+      <data key="edge_id">32</data>
+      <data key="bandwidth_mbps">688.883785</data>
+      <data key="propagation_delay_ms">4.150044</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.968096</data>
+      <data key="cost">4.875856</data>
+    </edge>
+    <edge id="e33" source="7" target="10">
+      <data key="edge_id">33</data>
+      <data key="bandwidth_mbps">336.117425</data>
+      <data key="propagation_delay_ms">1.998888</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.942204</data>
+      <data key="cost">3.486463</data>
+    </edge>
+    <edge id="e34" source="7" target="13">
+      <data key="edge_id">34</data>
+      <data key="bandwidth_mbps">100.853260</data>
+      <data key="propagation_delay_ms">1.268528</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.960775</data>
+      <data key="cost">6.226226</data>
+    </edge>
+    <edge id="e35" source="8" target="19">
+      <data key="edge_id">35</data>
+      <data key="bandwidth_mbps">239.942637</data>
+      <data key="propagation_delay_ms">3.282276</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.946217</data>
+      <data key="cost">5.366108</data>
+    </edge>
+    <edge id="e36" source="8" target="21">
+      <data key="edge_id">36</data>
+      <data key="bandwidth_mbps">552.209805</data>
+      <data key="propagation_delay_ms">2.133322</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.948517</data>
+      <data key="cost">3.038775</data>
+    </edge>
+    <edge id="e37" source="9" target="10">
+      <data key="edge_id">37</data>
+      <data key="bandwidth_mbps">255.922988</data>
+      <data key="propagation_delay_ms">5.335899</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.982248</data>
+      <data key="cost">7.289611</data>
+    </edge>
+    <edge id="e38" source="9" target="15">
+      <data key="edge_id">38</data>
+      <data key="bandwidth_mbps">459.843791</data>
+      <data key="propagation_delay_ms">1.833498</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.993495</data>
+      <data key="cost">2.920824</data>
+    </edge>
+    <edge id="e39" source="10" target="16">
+      <data key="edge_id">39</data>
+      <data key="bandwidth_mbps">566.425863</data>
+      <data key="propagation_delay_ms">5.353980</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.965872</data>
+      <data key="cost">6.236708</data>
+    </edge>
+    <edge id="e40" source="11" target="16">
+      <data key="edge_id">40</data>
+      <data key="bandwidth_mbps">500.741616</data>
+      <data key="propagation_delay_ms">3.044928</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.961571</data>
+      <data key="cost">4.043447</data>
+    </edge>
+    <edge id="e41" source="12" target="13">
+      <data key="edge_id">41</data>
+      <data key="bandwidth_mbps">520.485902</data>
+      <data key="propagation_delay_ms">1.038430</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.984367</data>
+      <data key="cost">1.999071</data>
+    </edge>
+    <edge id="e42" source="12" target="16">
+      <data key="edge_id">42</data>
+      <data key="bandwidth_mbps">724.912223</data>
+      <data key="propagation_delay_ms">2.474873</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.992438</data>
+      <data key="cost">3.164612</data>
+    </edge>
+    <edge id="e43" source="12" target="20">
+      <data key="edge_id">43</data>
+      <data key="bandwidth_mbps">854.459235</data>
+      <data key="propagation_delay_ms">1.169981</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.945428</data>
+      <data key="cost">1.755146</data>
+    </edge>
+    <edge id="e44" source="12" target="21">
+      <data key="edge_id">44</data>
+      <data key="bandwidth_mbps">471.461264</data>
+      <data key="propagation_delay_ms">4.217804</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.976550</data>
+      <data key="cost">5.278337</data>
+    </edge>
+    <edge id="e45" source="13" target="14">
+      <data key="edge_id">45</data>
+      <data key="bandwidth_mbps">466.583970</data>
+      <data key="propagation_delay_ms">2.214266</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.962366</data>
+      <data key="cost">3.285885</data>
+    </edge>
+    <edge id="e46" source="13" target="18">
+      <data key="edge_id">46</data>
+      <data key="bandwidth_mbps">664.580578</data>
+      <data key="propagation_delay_ms">4.287737</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.992150</data>
+      <data key="cost">5.040091</data>
+    </edge>
+    <edge id="e47" source="14" target="16">
+      <data key="edge_id">47</data>
+      <data key="bandwidth_mbps">240.521080</data>
+      <data key="propagation_delay_ms">3.668733</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.975096</data>
+      <data key="cost">5.747552</data>
+    </edge>
+    <edge id="e48" source="14" target="18">
+      <data key="edge_id">48</data>
+      <data key="bandwidth_mbps">459.709499</data>
+      <data key="propagation_delay_ms">2.863160</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.941095</data>
+      <data key="cost">3.950803</data>
+    </edge>
+    <edge id="e49" source="15" target="17">
+      <data key="edge_id">49</data>
+      <data key="bandwidth_mbps">824.642388</data>
+      <data key="propagation_delay_ms">1.408031</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.957654</data>
+      <data key="cost">2.014354</data>
+    </edge>
+    <edge id="e50" source="15" target="18">
+      <data key="edge_id">50</data>
+      <data key="bandwidth_mbps">992.785637</data>
+      <data key="propagation_delay_ms">4.165371</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.962418</data>
+      <data key="cost">4.669005</data>
+    </edge>
+    <edge id="e51" source="15" target="19">
+      <data key="edge_id">51</data>
+      <data key="bandwidth_mbps">359.026617</data>
+      <data key="propagation_delay_ms">2.833844</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.961642</data>
+      <data key="cost">4.226498</data>
+    </edge>
+    <edge id="e52" source="15" target="20">
+      <data key="edge_id">52</data>
+      <data key="bandwidth_mbps">763.876952</data>
+      <data key="propagation_delay_ms">2.865504</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.997728</data>
+      <data key="cost">3.520060</data>
+    </edge>
+    <edge id="e53" source="16" target="20">
+      <data key="edge_id">53</data>
+      <data key="bandwidth_mbps">502.063375</data>
+      <data key="propagation_delay_ms">2.011528</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.986358</data>
+      <data key="cost">3.007418</data>
+    </edge>
+    <edge id="e54" source="17" target="18">
+      <data key="edge_id">54</data>
+      <data key="bandwidth_mbps">741.412516</data>
+      <data key="propagation_delay_ms">4.785145</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.974852</data>
+      <data key="cost">5.459533</data>
+    </edge>
+    <edge id="e55" source="17" target="19">
+      <data key="edge_id">55</data>
+      <data key="bandwidth_mbps">359.117237</data>
+      <data key="propagation_delay_ms">5.446428</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.988403</data>
+      <data key="cost">6.838731</data>
+    </edge>
+    <edge id="e56" source="17" target="52">
+      <data key="edge_id">56</data>
+      <data key="bandwidth_mbps">94.606026</data>
+      <data key="propagation_delay_ms">11.444456</data>
+      <data key="is_inter_domain">true</data>
+      <data key="link_reliability">0.943917</data>
+      <data key="cost">16.729531</data>
+    </edge>
+    <edge id="e57" source="18" target="20">
+      <data key="edge_id">57</data>
+      <data key="bandwidth_mbps">415.228920</data>
+      <data key="propagation_delay_ms">3.348431</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.973090</data>
+      <data key="cost">4.552586</data>
+    </edge>
+    <edge id="e58" source="19" target="42">
+      <data key="edge_id">58</data>
+      <data key="bandwidth_mbps">66.583796</data>
+      <data key="propagation_delay_ms">21.032299</data>
+      <data key="is_inter_domain">true</data>
+      <data key="link_reliability">0.995038</data>
+      <data key="cost">28.541634</data>
+    </edge>
+    <edge id="e59" source="22" target="24">
+      <data key="edge_id">59</data>
+      <data key="bandwidth_mbps">558.043453</data>
+      <data key="propagation_delay_ms">2.405154</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.996677</data>
+      <data key="cost">3.301142</data>
+    </edge>
+    <edge id="e60" source="22" target="28">
+      <data key="edge_id">60</data>
+      <data key="bandwidth_mbps">597.044314</data>
+      <data key="propagation_delay_ms">2.382032</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.947385</data>
+      <data key="cost">3.219491</data>
+    </edge>
+    <edge id="e61" source="22" target="43">
+      <data key="edge_id">61</data>
+      <data key="bandwidth_mbps">361.020632</data>
+      <data key="propagation_delay_ms">2.598023</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.980318</data>
+      <data key="cost">3.982985</data>
+    </edge>
+    <edge id="e62" source="23" target="25">
+      <data key="edge_id">62</data>
+      <data key="bandwidth_mbps">484.757800</data>
+      <data key="propagation_delay_ms">3.913486</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.943298</data>
+      <data key="cost">4.944928</data>
+    </edge>
+    <edge id="e63" source="23" target="26">
+      <data key="edge_id">63</data>
+      <data key="bandwidth_mbps">285.888951</data>
+      <data key="propagation_delay_ms">2.962603</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.991245</data>
+      <data key="cost">4.711534</data>
+    </edge>
+    <edge id="e64" source="23" target="29">
+      <data key="edge_id">64</data>
+      <data key="bandwidth_mbps">866.826018</data>
+      <data key="propagation_delay_ms">2.332004</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.956035</data>
+      <data key="cost">2.908821</data>
+    </edge>
+    <edge id="e65" source="23" target="30">
+      <data key="edge_id">65</data>
+      <data key="bandwidth_mbps">776.549372</data>
+      <data key="propagation_delay_ms">1.114234</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.974626</data>
+      <data key="cost">1.758108</data>
+    </edge>
+    <edge id="e66" source="23" target="32">
+      <data key="edge_id">66</data>
+      <data key="bandwidth_mbps">331.891877</data>
+      <data key="propagation_delay_ms">4.079774</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.971105</data>
+      <data key="cost">5.586289</data>
+    </edge>
+    <edge id="e67" source="25" target="29">
+      <data key="edge_id">67</data>
+      <data key="bandwidth_mbps">954.751161</data>
+      <data key="propagation_delay_ms">3.028519</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.990324</data>
+      <data key="cost">3.552216</data>
+    </edge>
+    <edge id="e68" source="25" target="34">
+      <data key="edge_id">68</data>
+      <data key="bandwidth_mbps">479.180597</data>
+      <data key="propagation_delay_ms">2.698201</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.994484</data>
+      <data key="cost">3.741649</data>
+    </edge>
+    <edge id="e69" source="25" target="36">
+      <data key="edge_id">69</data>
+      <data key="bandwidth_mbps">960.591923</data>
+      <data key="propagation_delay_ms">2.472133</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.944425</data>
+      <data key="cost">2.992645</data>
+    </edge>
+    <edge id="e70" source="25" target="39">
+      <data key="edge_id">70</data>
+      <data key="bandwidth_mbps">264.282119</data>
+      <data key="propagation_delay_ms">3.492489</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.940125</data>
+      <data key="cost">5.384406</data>
+    </edge>
+    <edge id="e71" source="25" target="40">
+      <data key="edge_id">71</data>
+      <data key="bandwidth_mbps">311.595061</data>
+      <data key="propagation_delay_ms">4.542252</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.953594</data>
+      <data key="cost">6.146898</data>
+    </edge>
+    <edge id="e72" source="26" target="32">
+      <data key="edge_id">72</data>
+      <data key="bandwidth_mbps">518.535507</data>
+      <data key="propagation_delay_ms">2.430096</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.992850</data>
+      <data key="cost">3.394350</data>
+    </edge>
+    <edge id="e73" source="26" target="34">
+      <data key="edge_id">73</data>
+      <data key="bandwidth_mbps">288.634926</data>
+      <data key="propagation_delay_ms">3.974154</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.946178</data>
+      <data key="cost">5.706446</data>
+    </edge>
+    <edge id="e74" source="26" target="40">
+      <data key="edge_id">74</data>
+      <data key="bandwidth_mbps">527.369033</data>
+      <data key="propagation_delay_ms">3.756400</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.987327</data>
+      <data key="cost">4.704503</data>
+    </edge>
+    <edge id="e75" source="26" target="43">
+      <data key="edge_id">75</data>
+      <data key="bandwidth_mbps">625.360098</data>
+      <data key="propagation_delay_ms">2.588751</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.996515</data>
+      <data key="cost">3.388290</data>
+    </edge>
+    <edge id="e76" source="27" target="33">
+      <data key="edge_id">76</data>
+      <data key="bandwidth_mbps">154.299567</data>
+      <data key="propagation_delay_ms">8.016197</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.964088</data>
+      <data key="cost">11.256647</data>
+    </edge>
+    <edge id="e77" source="27" target="38">
+      <data key="edge_id">77</data>
+      <data key="bandwidth_mbps">527.996312</data>
+      <data key="propagation_delay_ms">4.892397</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.949351</data>
+      <data key="cost">5.839373</data>
+    </edge>
+    <edge id="e78" source="27" target="39">
+      <data key="edge_id">78</data>
+      <data key="bandwidth_mbps">937.272265</data>
+      <data key="propagation_delay_ms">2.874036</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.947033</data>
+      <data key="cost">3.407499</data>
+    </edge>
+    <edge id="e79" source="28" target="32">
+      <data key="edge_id">79</data>
+      <data key="bandwidth_mbps">307.378173</data>
+      <data key="propagation_delay_ms">2.086919</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.950016</data>
+      <data key="cost">3.713579</data>
+    </edge>
+    <edge id="e80" source="28" target="33">
+      <data key="edge_id">80</data>
+      <data key="bandwidth_mbps">687.060962</data>
+      <data key="propagation_delay_ms">6.489113</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.969927</data>
+      <data key="cost">7.216850</data>
+    </edge>
+    <edge id="e81" source="28" target="34">
+      <data key="edge_id">81</data>
+      <data key="bandwidth_mbps">843.112238</data>
+      <data key="propagation_delay_ms">3.745883</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.973304</data>
+      <data key="cost">4.338924</data>
+    </edge>
+    <edge id="e82" source="28" target="40">
+      <data key="edge_id">82</data>
+      <data key="bandwidth_mbps">872.841782</data>
+      <data key="propagation_delay_ms">4.813640</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.953050</data>
+      <data key="cost">5.386482</data>
+    </edge>
+    <edge id="e83" source="28" target="41">
+      <data key="edge_id">83</data>
+      <data key="bandwidth_mbps">795.307580</data>
+      <data key="propagation_delay_ms">1.976986</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.947026</data>
+      <data key="cost">2.605674</data>
+    </edge>
+    <edge id="e84" source="28" target="42">
+      <data key="edge_id">84</data>
+      <data key="bandwidth_mbps">856.674666</data>
+      <data key="propagation_delay_ms">5.639447</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.943463</data>
+      <data key="cost">6.223099</data>
+    </edge>
+    <edge id="e85" source="29" target="34">
+      <data key="edge_id">85</data>
+      <data key="bandwidth_mbps">995.721505</data>
+      <data key="propagation_delay_ms">3.468678</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.977132</data>
+      <data key="cost">3.970826</data>
+    </edge>
+    <edge id="e86" source="29" target="36">
+      <data key="edge_id">86</data>
+      <data key="bandwidth_mbps">814.944053</data>
+      <data key="propagation_delay_ms">3.102470</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.948079</data>
+      <data key="cost">3.716009</data>
+    </edge>
+    <edge id="e87" source="29" target="39">
+      <data key="edge_id">87</data>
+      <data key="bandwidth_mbps">971.836981</data>
+      <data key="propagation_delay_ms">4.842750</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.978613</data>
+      <data key="cost">5.357239</data>
+    </edge>
+    <edge id="e88" source="29" target="42">
+      <data key="edge_id">88</data>
+      <data key="bandwidth_mbps">621.387806</data>
+      <data key="propagation_delay_ms">5.539354</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.963884</data>
+      <data key="cost">6.344005</data>
+    </edge>
+    <edge id="e89" source="30" target="37">
+      <data key="edge_id">89</data>
+      <data key="bandwidth_mbps">247.688469</data>
+      <data key="propagation_delay_ms">1.926888</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.965233</data>
+      <data key="cost">3.945553</data>
+    </edge>
+    <edge id="e90" source="30" target="38">
+      <data key="edge_id">90</data>
+      <data key="bandwidth_mbps">385.799940</data>
+      <data key="propagation_delay_ms">3.041388</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.995754</data>
+      <data key="cost">4.337396</data>
+    </edge>
+    <edge id="e91" source="31" target="32">
+      <data key="edge_id">91</data>
+      <data key="bandwidth_mbps">915.937682</data>
+      <data key="propagation_delay_ms">4.943902</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.995632</data>
+      <data key="cost">5.489790</data>
+    </edge>
+    <edge id="e92" source="31" target="39">
+      <data key="edge_id">92</data>
+      <data key="bandwidth_mbps">742.838162</data>
+      <data key="propagation_delay_ms">4.778604</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.977953</data>
+      <data key="cost">5.451698</data>
+    </edge>
+    <edge id="e93" source="31" target="42">
+      <data key="edge_id">93</data>
+      <data key="bandwidth_mbps">645.610929</data>
+      <data key="propagation_delay_ms">4.104470</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.991860</data>
+      <data key="cost">4.878930</data>
+    </edge>
+    <edge id="e94" source="31" target="43">
+      <data key="edge_id">94</data>
+      <data key="bandwidth_mbps">515.202893</data>
+      <data key="propagation_delay_ms">2.456488</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.986568</data>
+      <data key="cost">3.426979</data>
+    </edge>
+    <edge id="e95" source="32" target="33">
+      <data key="edge_id">95</data>
+      <data key="bandwidth_mbps">849.806115</data>
+      <data key="propagation_delay_ms">6.412074</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.998269</data>
+      <data key="cost">7.000443</data>
+    </edge>
+    <edge id="e96" source="32" target="40">
+      <data key="edge_id">96</data>
+      <data key="bandwidth_mbps">215.807443</data>
+      <data key="propagation_delay_ms">5.049437</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.975255</data>
+      <data key="cost">7.366317</data>
+    </edge>
+    <edge id="e97" source="32" target="41">
+      <data key="edge_id">97</data>
+      <data key="bandwidth_mbps">626.160722</data>
+      <data key="propagation_delay_ms">1.566213</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.951110</data>
+      <data key="cost">2.364730</data>
+    </edge>
+    <edge id="e98" source="32" target="43">
+      <data key="edge_id">98</data>
+      <data key="bandwidth_mbps">729.624691</data>
+      <data key="propagation_delay_ms">5.061157</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.990113</data>
+      <data key="cost">5.746441</data>
+    </edge>
+    <edge id="e99" source="32" target="51">
+      <data key="edge_id">99</data>
+      <data key="bandwidth_mbps">47.204340</data>
+      <data key="propagation_delay_ms">12.035671</data>
+      <data key="is_inter_domain">true</data>
+      <data key="link_reliability">0.990547</data>
+      <data key="cost">22.627918</data>
+    </edge>
+    <edge id="e100" source="33" target="38">
+      <data key="edge_id">100</data>
+      <data key="bandwidth_mbps">105.166081</data>
+      <data key="propagation_delay_ms">4.902235</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.969066</data>
+      <data key="cost">9.656620</data>
+    </edge>
+    <edge id="e101" source="33" target="39">
+      <data key="edge_id">101</data>
+      <data key="bandwidth_mbps">692.930122</data>
+      <data key="propagation_delay_ms">4.996522</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.986495</data>
+      <data key="cost">5.718096</data>
+    </edge>
+    <edge id="e102" source="33" target="42">
+      <data key="edge_id">102</data>
+      <data key="bandwidth_mbps">985.655399</data>
+      <data key="propagation_delay_ms">4.936054</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.944341</data>
+      <data key="cost">5.443331</data>
+    </edge>
+    <edge id="e103" source="35" target="36">
+      <data key="edge_id">103</data>
+      <data key="bandwidth_mbps">372.009786</data>
+      <data key="propagation_delay_ms">6.962546</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.970661</data>
+      <data key="cost">8.306597</data>
+    </edge>
+    <edge id="e104" source="35" target="37">
+      <data key="edge_id">104</data>
+      <data key="bandwidth_mbps">593.019019</data>
+      <data key="propagation_delay_ms">5.972407</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.980849</data>
+      <data key="cost">6.815550</data>
+    </edge>
+    <edge id="e105" source="35" target="38">
+      <data key="edge_id">105</data>
+      <data key="bandwidth_mbps">209.642720</data>
+      <data key="propagation_delay_ms">5.831630</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.951155</data>
+      <data key="cost">8.216640</data>
+    </edge>
+    <edge id="e106" source="35" target="39">
+      <data key="edge_id">106</data>
+      <data key="bandwidth_mbps">680.340425</data>
+      <data key="propagation_delay_ms">9.041804</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.992472</data>
+      <data key="cost">9.776730</data>
+    </edge>
+    <edge id="e107" source="35" target="42">
+      <data key="edge_id">107</data>
+      <data key="bandwidth_mbps">338.621317</data>
+      <data key="propagation_delay_ms">7.033927</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.955004</data>
+      <data key="cost">8.510503</data>
+    </edge>
+    <edge id="e108" source="35" target="43">
+      <data key="edge_id">108</data>
+      <data key="bandwidth_mbps">838.614866</data>
+      <data key="propagation_delay_ms">3.240959</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.986582</data>
+      <data key="cost">3.837180</data>
+    </edge>
+    <edge id="e109" source="36" target="37">
+      <data key="edge_id">109</data>
+      <data key="bandwidth_mbps">448.204876</data>
+      <data key="propagation_delay_ms">2.210943</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.951680</data>
+      <data key="cost">3.326504</data>
+    </edge>
+    <edge id="e110" source="36" target="40">
+      <data key="edge_id">110</data>
+      <data key="bandwidth_mbps">406.201993</data>
+      <data key="propagation_delay_ms">5.830742</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.961812</data>
+      <data key="cost">7.061657</data>
+    </edge>
+    <edge id="e111" source="37" target="42">
+      <data key="edge_id">111</data>
+      <data key="bandwidth_mbps">506.554790</data>
+      <data key="propagation_delay_ms">6.404305</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.944613</data>
+      <data key="cost">7.391365</data>
+    </edge>
+    <edge id="e112" source="37" target="43">
+      <data key="edge_id">112</data>
+      <data key="bandwidth_mbps">617.856458</data>
+      <data key="propagation_delay_ms">4.874798</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.993245</data>
+      <data key="cost">5.684048</data>
+    </edge>
+    <edge id="e113" source="38" target="50">
+      <data key="edge_id">113</data>
+      <data key="bandwidth_mbps">90.106514</data>
+      <data key="propagation_delay_ms">14.745273</data>
+      <data key="is_inter_domain">true</data>
+      <data key="link_reliability">0.998615</data>
+      <data key="cost">20.294261</data>
+    </edge>
+    <edge id="e114" source="39" target="41">
+      <data key="edge_id">114</data>
+      <data key="bandwidth_mbps">871.613652</data>
+      <data key="propagation_delay_ms">3.288173</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.945963</data>
+      <data key="cost">3.861821</data>
+    </edge>
+    <edge id="e115" source="44" target="45">
+      <data key="edge_id">115</data>
+      <data key="bandwidth_mbps">134.492481</data>
+      <data key="propagation_delay_ms">3.519747</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.952558</data>
+      <data key="cost">7.237427</data>
+    </edge>
+    <edge id="e116" source="44" target="49">
+      <data key="edge_id">116</data>
+      <data key="bandwidth_mbps">222.306855</data>
+      <data key="propagation_delay_ms">2.301730</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.946155</data>
+      <data key="cost">4.550873</data>
+    </edge>
+    <edge id="e117" source="44" target="56">
+      <data key="edge_id">117</data>
+      <data key="bandwidth_mbps">646.542082</data>
+      <data key="propagation_delay_ms">5.621212</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.982726</data>
+      <data key="cost">6.394557</data>
+    </edge>
+    <edge id="e118" source="44" target="60">
+      <data key="edge_id">118</data>
+      <data key="bandwidth_mbps">180.560823</data>
+      <data key="propagation_delay_ms">3.451900</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.968106</data>
+      <data key="cost">6.221050</data>
+    </edge>
+    <edge id="e119" source="44" target="62">
+      <data key="edge_id">119</data>
+      <data key="bandwidth_mbps">253.765404</data>
+      <data key="propagation_delay_ms">2.888116</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.986563</data>
+      <data key="cost">4.858440</data>
+    </edge>
+    <edge id="e120" source="44" target="63">
+      <data key="edge_id">120</data>
+      <data key="bandwidth_mbps">169.691469</data>
+      <data key="propagation_delay_ms">2.154571</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.973636</data>
+      <data key="cost">5.101095</data>
+    </edge>
+    <edge id="e121" source="45" target="47">
+      <data key="edge_id">121</data>
+      <data key="bandwidth_mbps">999.580517</data>
+      <data key="propagation_delay_ms">4.634469</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.952677</data>
+      <data key="cost">5.134679</data>
+    </edge>
+    <edge id="e122" source="45" target="48">
+      <data key="edge_id">122</data>
+      <data key="bandwidth_mbps">828.268924</data>
+      <data key="propagation_delay_ms">2.953182</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.988587</data>
+      <data key="cost">3.556851</data>
+    </edge>
+    <edge id="e123" source="45" target="51">
+      <data key="edge_id">123</data>
+      <data key="bandwidth_mbps">790.823928</data>
+      <data key="propagation_delay_ms">4.837908</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.997577</data>
+      <data key="cost">5.470160</data>
+    </edge>
+    <edge id="e124" source="45" target="56">
+      <data key="edge_id">124</data>
+      <data key="bandwidth_mbps">529.897798</data>
+      <data key="propagation_delay_ms">4.162653</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.967471</data>
+      <data key="cost">5.106231</data>
+    </edge>
+    <edge id="e125" source="45" target="59">
+      <data key="edge_id">125</data>
+      <data key="bandwidth_mbps">833.123572</data>
+      <data key="propagation_delay_ms">5.296965</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.946291</data>
+      <data key="cost">5.897116</data>
+    </edge>
+    <edge id="e126" source="45" target="60">
+      <data key="edge_id">126</data>
+      <data key="bandwidth_mbps">920.279553</data>
+      <data key="propagation_delay_ms">1.157823</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.977218</data>
+      <data key="cost">1.701137</data>
+    </edge>
+    <edge id="e127" source="45" target="65">
+      <data key="edge_id">127</data>
+      <data key="bandwidth_mbps">345.552579</data>
+      <data key="propagation_delay_ms">7.574478</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.969874</data>
+      <data key="cost">9.021436</data>
+    </edge>
+    <edge id="e128" source="46" target="56">
+      <data key="edge_id">128</data>
+      <data key="bandwidth_mbps">727.927345</data>
+      <data key="propagation_delay_ms">5.139891</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.975839</data>
+      <data key="cost">5.826773</data>
+    </edge>
+    <edge id="e129" source="46" target="60">
+      <data key="edge_id">129</data>
+      <data key="bandwidth_mbps">420.685263</data>
+      <data key="propagation_delay_ms">3.854349</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.989940</data>
+      <data key="cost">5.042886</data>
+    </edge>
+    <edge id="e130" source="46" target="61">
+      <data key="edge_id">130</data>
+      <data key="bandwidth_mbps">728.971350</data>
+      <data key="propagation_delay_ms">6.358015</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.967668</data>
+      <data key="cost">7.043913</data>
+    </edge>
+    <edge id="e131" source="47" target="53">
+      <data key="edge_id">131</data>
+      <data key="bandwidth_mbps">947.561167</data>
+      <data key="propagation_delay_ms">2.197269</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.978782</data>
+      <data key="cost">2.724940</data>
+    </edge>
+    <edge id="e132" source="47" target="55">
+      <data key="edge_id">132</data>
+      <data key="bandwidth_mbps">580.168191</data>
+      <data key="propagation_delay_ms">3.462215</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.983593</data>
+      <data key="cost">4.324034</data>
+    </edge>
+    <edge id="e133" source="47" target="57">
+      <data key="edge_id">133</data>
+      <data key="bandwidth_mbps">952.846065</data>
+      <data key="propagation_delay_ms">5.123597</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.952018</data>
+      <data key="cost">5.648340</data>
+    </edge>
+    <edge id="e134" source="47" target="63">
+      <data key="edge_id">134</data>
+      <data key="bandwidth_mbps">914.378135</data>
+      <data key="propagation_delay_ms">0.581016</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.983768</data>
+      <data key="cost">1.127836</data>
+    </edge>
+    <edge id="e135" source="47" target="65">
+      <data key="edge_id">135</data>
+      <data key="bandwidth_mbps">888.371562</data>
+      <data key="propagation_delay_ms">4.969382</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.992465</data>
+      <data key="cost">5.532210</data>
+    </edge>
+    <edge id="e136" source="47" target="66">
+      <data key="edge_id">136</data>
+      <data key="bandwidth_mbps">920.700891</data>
+      <data key="propagation_delay_ms">2.575164</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.992223</data>
+      <data key="cost">3.118229</data>
+    </edge>
+    <edge id="e137" source="48" target="50">
+      <data key="edge_id">137</data>
+      <data key="bandwidth_mbps">396.504944</data>
+      <data key="propagation_delay_ms">4.991351</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.992446</data>
+      <data key="cost">6.252369</data>
+    </edge>
+    <edge id="e138" source="48" target="51">
+      <data key="edge_id">138</data>
+      <data key="bandwidth_mbps">167.111117</data>
+      <data key="propagation_delay_ms">3.177829</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.963868</data>
+      <data key="cost">6.169850</data>
+    </edge>
+    <edge id="e139" source="48" target="52">
+      <data key="edge_id">139</data>
+      <data key="bandwidth_mbps">197.244350</data>
+      <data key="propagation_delay_ms">4.140072</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.942192</data>
+      <data key="cost">6.674999</data>
+    </edge>
+    <edge id="e140" source="48" target="59">
+      <data key="edge_id">140</data>
+      <data key="bandwidth_mbps">673.928026</data>
+      <data key="propagation_delay_ms">2.939071</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.970180</data>
+      <data key="cost">3.680990</data>
+    </edge>
+    <edge id="e141" source="48" target="60">
+      <data key="edge_id">141</data>
+      <data key="bandwidth_mbps">540.313518</data>
+      <data key="propagation_delay_ms">2.801651</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.943502</data>
+      <data key="cost">3.727040</data>
+    </edge>
+    <edge id="e142" source="48" target="64">
+      <data key="edge_id">142</data>
+      <data key="bandwidth_mbps">157.220695</data>
+      <data key="propagation_delay_ms">3.049742</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.963354</data>
+      <data key="cost">6.229985</data>
+    </edge>
+    <edge id="e143" source="48" target="65">
+      <data key="edge_id">143</data>
+      <data key="bandwidth_mbps">996.555032</data>
+      <data key="propagation_delay_ms">4.713546</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.941628</data>
+      <data key="cost">5.215274</data>
+    </edge>
+    <edge id="e144" source="49" target="54">
+      <data key="edge_id">144</data>
+      <data key="bandwidth_mbps">463.510839</data>
+      <data key="propagation_delay_ms">4.487141</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.985191</data>
+      <data key="cost">5.565865</data>
+    </edge>
+    <edge id="e145" source="49" target="57">
+      <data key="edge_id">145</data>
+      <data key="bandwidth_mbps">450.382940</data>
+      <data key="propagation_delay_ms">4.528894</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.992492</data>
+      <data key="cost">5.639061</data>
+    </edge>
+    <edge id="e146" source="49" target="61">
+      <data key="edge_id">146</data>
+      <data key="bandwidth_mbps">124.805596</data>
+      <data key="propagation_delay_ms">3.463439</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.981928</data>
+      <data key="cost">7.469670</data>
+    </edge>
+    <edge id="e147" source="49" target="64">
+      <data key="edge_id">147</data>
+      <data key="bandwidth_mbps">867.000815</data>
+      <data key="propagation_delay_ms">2.995077</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.958371</data>
+      <data key="cost">3.571778</data>
+    </edge>
+    <edge id="e148" source="49" target="65">
+      <data key="edge_id">148</data>
+      <data key="bandwidth_mbps">476.919021</data>
+      <data key="propagation_delay_ms">5.701941</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.977270</data>
+      <data key="cost">6.750337</data>
+    </edge>
+    <edge id="e149" source="50" target="58">
+      <data key="edge_id">149</data>
+      <data key="bandwidth_mbps">543.604814</data>
+      <data key="propagation_delay_ms">4.290459</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.970354</data>
+      <data key="cost">5.210245</data>
+    </edge>
+    <edge id="e150" source="50" target="60">
+      <data key="edge_id">150</data>
+      <data key="bandwidth_mbps">871.250890</data>
+      <data key="propagation_delay_ms">3.988719</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.977748</data>
+      <data key="cost">4.562607</data>
+    </edge>
+    <edge id="e151" source="50" target="62">
+      <data key="edge_id">151</data>
+      <data key="bandwidth_mbps">508.671606</data>
+      <data key="propagation_delay_ms">4.950409</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.952095</data>
+      <data key="cost">5.933362</data>
+    </edge>
+    <edge id="e152" source="50" target="63">
+      <data key="edge_id">152</data>
+      <data key="bandwidth_mbps">831.973942</data>
+      <data key="propagation_delay_ms">4.137412</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.943130</data>
+      <data key="cost">4.738392</data>
+    </edge>
+    <edge id="e153" source="50" target="64">
+      <data key="edge_id">153</data>
+      <data key="bandwidth_mbps">753.936658</data>
+      <data key="propagation_delay_ms">6.410678</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.942948</data>
+      <data key="cost">7.073864</data>
+    </edge>
+    <edge id="e154" source="51" target="54">
+      <data key="edge_id">154</data>
+      <data key="bandwidth_mbps">183.063756</data>
+      <data key="propagation_delay_ms">4.610236</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.940149</data>
+      <data key="cost">7.341525</data>
+    </edge>
+    <edge id="e155" source="51" target="56">
+      <data key="edge_id">155</data>
+      <data key="bandwidth_mbps">385.174877</data>
+      <data key="propagation_delay_ms">5.973098</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.993699</data>
+      <data key="cost">7.271210</data>
+    </edge>
+    <edge id="e156" source="51" target="58">
+      <data key="edge_id">156</data>
+      <data key="bandwidth_mbps">677.636342</data>
+      <data key="propagation_delay_ms">4.607894</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.976128</data>
+      <data key="cost">5.345753</data>
+    </edge>
+    <edge id="e157" source="51" target="61">
+      <data key="edge_id">157</data>
+      <data key="bandwidth_mbps">755.782848</data>
+      <data key="propagation_delay_ms">5.747471</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.989937</data>
+      <data key="cost">6.409036</data>
+    </edge>
+    <edge id="e158" source="51" target="62">
+      <data key="edge_id">158</data>
+      <data key="bandwidth_mbps">540.259396</data>
+      <data key="propagation_delay_ms">4.525604</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.991241</data>
+      <data key="cost">5.451086</data>
+    </edge>
+    <edge id="e159" source="51" target="64">
+      <data key="edge_id">159</data>
+      <data key="bandwidth_mbps">829.521566</data>
+      <data key="propagation_delay_ms">4.559166</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.977805</data>
+      <data key="cost">5.161923</data>
+    </edge>
+    <edge id="e160" source="51" target="66">
+      <data key="edge_id">160</data>
+      <data key="bandwidth_mbps">991.300342</data>
+      <data key="propagation_delay_ms">3.688295</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.977212</data>
+      <data key="cost">4.192683</data>
+    </edge>
+    <edge id="e161" source="52" target="54">
+      <data key="edge_id">161</data>
+      <data key="bandwidth_mbps">218.222190</data>
+      <data key="propagation_delay_ms">4.222196</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.991841</data>
+      <data key="cost">6.513439</data>
+    </edge>
+    <edge id="e162" source="52" target="55">
+      <data key="edge_id">162</data>
+      <data key="bandwidth_mbps">925.624979</data>
+      <data key="propagation_delay_ms">4.460854</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.947967</data>
+      <data key="cost">5.001029</data>
+    </edge>
+    <edge id="e163" source="52" target="56">
+      <data key="edge_id">163</data>
+      <data key="bandwidth_mbps">743.645250</data>
+      <data key="propagation_delay_ms">8.029637</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.978765</data>
+      <data key="cost">8.702001</data>
+    </edge>
+    <edge id="e164" source="52" target="58">
+      <data key="edge_id">164</data>
+      <data key="bandwidth_mbps">861.244315</data>
+      <data key="propagation_delay_ms">6.570348</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.984351</data>
+      <data key="cost">7.150903</data>
+    </edge>
+    <edge id="e165" source="52" target="59">
+      <data key="edge_id">165</data>
+      <data key="bandwidth_mbps">557.266434</data>
+      <data key="propagation_delay_ms">4.270375</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.948195</data>
+      <data key="cost">5.167612</data>
+    </edge>
+    <edge id="e166" source="52" target="60">
+      <data key="edge_id">166</data>
+      <data key="bandwidth_mbps">958.197986</data>
+      <data key="propagation_delay_ms">5.335408</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.978689</data>
+      <data key="cost">5.857221</data>
+    </edge>
+    <edge id="e167" source="52" target="65">
+      <data key="edge_id">167</data>
+      <data key="bandwidth_mbps">963.033628</data>
+      <data key="propagation_delay_ms">2.333454</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.974859</data>
+      <data key="cost">2.852647</data>
+    </edge>
+    <edge id="e168" source="53" target="55">
+      <data key="edge_id">168</data>
+      <data key="bandwidth_mbps">524.222164</data>
+      <data key="propagation_delay_ms">4.019260</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.971500</data>
+      <data key="cost">4.973055</data>
+    </edge>
+    <edge id="e169" source="53" target="56">
+      <data key="edge_id">169</data>
+      <data key="bandwidth_mbps">510.495016</data>
+      <data key="propagation_delay_ms">3.331227</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.992067</data>
+      <data key="cost">4.310668</data>
+    </edge>
+    <edge id="e170" source="53" target="57">
+      <data key="edge_id">170</data>
+      <data key="bandwidth_mbps">602.583982</data>
+      <data key="propagation_delay_ms">4.746297</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.941156</data>
+      <data key="cost">5.576057</data>
+    </edge>
+    <edge id="e171" source="53" target="58">
+      <data key="edge_id">171</data>
+      <data key="bandwidth_mbps">217.527825</data>
+      <data key="propagation_delay_ms">4.271873</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.960228</data>
+      <data key="cost">6.570430</data>
+    </edge>
+    <edge id="e172" source="53" target="60">
+      <data key="edge_id">172</data>
+      <data key="bandwidth_mbps">575.641825</data>
+      <data key="propagation_delay_ms">3.703714</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.983096</data>
+      <data key="cost">4.572310</data>
+    </edge>
+    <edge id="e173" source="53" target="61">
+      <data key="edge_id">173</data>
+      <data key="bandwidth_mbps">825.959583</data>
+      <data key="propagation_delay_ms">4.538264</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.971001</data>
+      <data key="cost">5.143620</data>
+    </edge>
+    <edge id="e174" source="53" target="62">
+      <data key="edge_id">174</data>
+      <data key="bandwidth_mbps">148.840357</data>
+      <data key="propagation_delay_ms">1.966455</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.952601</data>
+      <data key="cost">5.325759</data>
+    </edge>
+    <edge id="e175" source="54" target="55">
+      <data key="edge_id">175</data>
+      <data key="bandwidth_mbps">850.165824</data>
+      <data key="propagation_delay_ms">3.855248</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.980322</data>
+      <data key="cost">4.443369</data>
+    </edge>
+    <edge id="e176" source="55" target="57">
+      <data key="edge_id">176</data>
+      <data key="bandwidth_mbps">929.650295</data>
+      <data key="propagation_delay_ms">5.710568</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.979408</data>
+      <data key="cost">6.248405</data>
+    </edge>
+    <edge id="e177" source="55" target="63">
+      <data key="edge_id">177</data>
+      <data key="bandwidth_mbps">791.644735</data>
+      <data key="propagation_delay_ms">3.284029</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.960360</data>
+      <data key="cost">3.915625</data>
+    </edge>
+    <edge id="e178" source="55" target="64">
+      <data key="edge_id">178</data>
+      <data key="bandwidth_mbps">999.116164</data>
+      <data key="propagation_delay_ms">3.108284</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.958711</data>
+      <data key="cost">3.608726</data>
+    </edge>
+    <edge id="e179" source="56" target="59">
+      <data key="edge_id">179</data>
+      <data key="bandwidth_mbps">715.852306</data>
+      <data key="propagation_delay_ms">5.179790</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.988935</data>
+      <data key="cost">5.878258</data>
+    </edge>
+    <edge id="e180" source="57" target="65">
+      <data key="edge_id">180</data>
+      <data key="bandwidth_mbps">374.045721</data>
+      <data key="propagation_delay_ms">9.644672</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.980611</data>
+      <data key="cost">10.981407</data>
+    </edge>
+    <edge id="e181" source="58" target="61">
+      <data key="edge_id">181</data>
+      <data key="bandwidth_mbps">113.676604</data>
+      <data key="propagation_delay_ms">1.760685</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.989100</data>
+      <data key="cost">6.159127</data>
+    </edge>
+    <edge id="e182" source="58" target="64">
+      <data key="edge_id">182</data>
+      <data key="bandwidth_mbps">652.747428</data>
+      <data key="propagation_delay_ms">4.347279</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.981659</data>
+      <data key="cost">5.113272</data>
+    </edge>
+    <edge id="e183" source="59" target="62">
+      <data key="edge_id">183</data>
+      <data key="bandwidth_mbps">960.423023</data>
+      <data key="propagation_delay_ms">3.486024</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.950664</data>
+      <data key="cost">4.006628</data>
+    </edge>
+    <edge id="e184" source="59" target="65">
+      <data key="edge_id">184</data>
+      <data key="bandwidth_mbps">949.766795</data>
+      <data key="propagation_delay_ms">5.201621</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.950638</data>
+      <data key="cost">5.728066</data>
+    </edge>
+    <edge id="e185" source="60" target="61">
+      <data key="edge_id">185</data>
+      <data key="bandwidth_mbps">115.859486</data>
+      <data key="propagation_delay_ms">2.728502</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.990028</data>
+      <data key="cost">7.044074</data>
+    </edge>
+    <edge id="e186" source="60" target="62">
+      <data key="edge_id">186</data>
+      <data key="bandwidth_mbps">578.710775</data>
+      <data key="propagation_delay_ms">1.385172</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.973977</data>
+      <data key="cost">2.249161</data>
+    </edge>
+    <edge id="e187" source="60" target="66">
+      <data key="edge_id">187</data>
+      <data key="bandwidth_mbps">351.476483</data>
+      <data key="propagation_delay_ms">3.399086</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.994753</data>
+      <data key="cost">4.821656</data>
+    </edge>
+    <edge id="e188" source="61" target="64">
+      <data key="edge_id">188</data>
+      <data key="bandwidth_mbps">705.475937</data>
+      <data key="propagation_delay_ms">5.338581</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.946991</data>
+      <data key="cost">6.047322</data>
+    </edge>
+    <edge id="e189" source="61" target="65">
+      <data key="edge_id">189</data>
+      <data key="bandwidth_mbps">938.713856</data>
+      <data key="propagation_delay_ms">8.790715</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.981937</data>
+      <data key="cost">9.323359</data>
+    </edge>
+    <edge id="e190" source="62" target="66">
+      <data key="edge_id">190</data>
+      <data key="bandwidth_mbps">538.517639</data>
+      <data key="propagation_delay_ms">1.105461</data>
+      <data key="is_inter_domain">false</data>
+      <data key="link_reliability">0.958779</data>
+      <data key="cost">2.033935</data>
     </edge>
   </graph>
 </graphml>
