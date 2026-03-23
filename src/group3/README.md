@@ -74,13 +74,14 @@ Group 11 consumes the files produced here directly. The file formats, naming con
 │   ├── raw/                             # Generated outputs (not committed)
 │   └── processed/                       # Processed datasets
 
+```
 ---
 
 ## 3. Architecture Overview
 
 The pipeline runs in a single loop over all topologies. For each topology it performs two sequential phases:
 
-```text
+```bash
 For each topology_id in 1..N:
 │
 ├── generate_topology()                     topology.py
@@ -118,6 +119,7 @@ After all topologies:
     write_topology_index()       → topology_index.json
     all_snapshots.csv            (master flat CSV: all topologies × all timesteps)
 ```
+---
 
 ## 4. Output Structure
 
@@ -157,6 +159,7 @@ data/raw/
     ├── topology_001_global_snapshots.csv      ← all 12 timesteps, global row
     └── ...  (3 CSVs per topology = 1,500 files)
 ```
+---
 
 **File counts for a full 500-topology, 12-timestep run:**
 
