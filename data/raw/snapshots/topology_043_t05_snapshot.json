@@ -1,0 +1,2367 @@
+{
+  "snapshot_id": "topology_043_t05",
+  "topology_id": 43,
+  "timestep": 5,
+  "queue_model": "mm1",
+  "global_features": {
+    "time_of_day": 10.0,
+    "diurnal_factor": 1.1198557158514988,
+    "flash_event": 0,
+    "flash_multiplier": 1.0,
+    "traffic_profile": "web",
+    "network_load_mbps": 284.15370501267273
+  },
+  "edge_labels": [
+    {
+      "edge_id": 0,
+      "u": 0,
+      "v": 1,
+      "bandwidth_mbps": 540.7679859853836,
+      "load_mbps": 64.89609175239488,
+      "utilization": 0.12000727379255206,
+      "queue_length_pkts": 0.016365755459353093,
+      "latency_ms": 2.0541863446745365,
+      "propagation_delay_ms": 2.053934160682906,
+      "link_reliability": 0.9932361046222035,
+      "cost_metric": 2.9785451083685452,
+      "is_bottleneck": 0,
+      "is_inter_domain": false
+    },
+    {
+      "edge_id": 1,
+      "u": 0,
+      "v": 2,
+      "bandwidth_mbps": 757.730925766015,
+      "load_mbps": 29.54784120340392,
+      "utilization": 0.0389951633207171,
+      "queue_length_pkts": 0.001582325816032161,
+      "latency_ms": 4.765681693659754,
+      "propagation_delay_ms": 4.765628142342583,
+      "link_reliability": 0.9937950513637512,
+      "cost_metric": 5.425492987497917,
+      "is_bottleneck": 0,
+      "is_inter_domain": false
+    },
+    {
+      "edge_id": 2,
+      "u": 1,
+      "v": 3,
+      "bandwidth_mbps": 86.72379631039631,
+      "load_mbps": 105.28953410030842,
+      "utilization": 1.2,
+      "queue_length_pkts": 198.00499999999982,
+      "latency_ms": 48.887743267617466,
+      "propagation_delay_ms": 10.193102021888846,
+      "link_reliability": 0.9438931301482245,
+      "cost_metric": 15.95853228753856,
+      "is_bottleneck": 1,
+      "is_inter_domain": true
+    },
+    {
+      "edge_id": 3,
+      "u": 1,
+      "v": 14,
+      "bandwidth_mbps": 97.38967756072572,
+      "load_mbps": 48.98537738094017,
+      "utilization": 0.5029832586764255,
+      "queue_length_pkts": 0.5090214020457906,
+      "latency_ms": 8.85838212214852,
+      "propagation_delay_ms": 8.847990829292137,
+      "link_reliability": 0.9831019001624207,
+      "cost_metric": 13.982005157332532,
+      "is_bottleneck": 0,
+      "is_inter_domain": true
+    },
+    {
+      "edge_id": 4,
+      "u": 1,
+      "v": 17,
+      "bandwidth_mbps": 80.11899540616528,
+      "load_mbps": 25.77828627387292,
+      "utilization": 0.3217499937834872,
+      "queue_length_pkts": 0.15263259498832518,
+      "latency_ms": 5.863925230595119,
+      "propagation_delay_ms": 5.858004255346154,
+      "link_reliability": 0.9642005970591253,
+      "cost_metric": 12.09872154673551,
+      "is_bottleneck": 0,
+      "is_inter_domain": true
+    },
+    {
+      "edge_id": 5,
+      "u": 3,
+      "v": 4,
+      "bandwidth_mbps": 856.723208507114,
+      "load_mbps": 25.896801176530552,
+      "utilization": 0.030227733904462695,
+      "queue_length_pkts": 0.0009421963577879723,
+      "latency_ms": 2.665870685143182,
+      "propagation_delay_ms": 2.665834302411919,
+      "link_reliability": 0.9591319411952127,
+      "cost_metric": 3.2494533698482693,
+      "is_bottleneck": 0,
+      "is_inter_domain": false
+    },
+    {
+      "edge_id": 6,
+      "u": 3,
+      "v": 5,
+      "bandwidth_mbps": 514.286368289685,
+      "load_mbps": 35.738146464552564,
+      "utilization": 0.06949075197813163,
+      "queue_length_pkts": 0.005189593355199752,
+      "latency_ms": 2.8431196211464207,
+      "propagation_delay_ms": 2.84297440954849,
+      "link_reliability": 0.9659374815284238,
+      "cost_metric": 3.8151953954221858,
+      "is_bottleneck": 0,
+      "is_inter_domain": false
+    },
+    {
+      "edge_id": 7,
+      "u": 3,
+      "v": 6,
+      "bandwidth_mbps": 787.9500609099573,
+      "load_mbps": 42.192896704851314,
+      "utilization": 0.053547678714721096,
+      "queue_length_pkts": 0.0030295809215631045,
+      "latency_ms": 6.515309915018175,
+      "propagation_delay_ms": 6.515238111914853,
+      "link_reliability": 0.9911602717850936,
+      "cost_metric": 7.149796093194249,
+      "is_bottleneck": 0,
+      "is_inter_domain": false
+    },
+    {
+      "edge_id": 8,
+      "u": 3,
+      "v": 7,
+      "bandwidth_mbps": 880.7528906188527,
+      "load_mbps": 51.65519970998832,
+      "utilization": 0.058648913060839664,
+      "queue_length_pkts": 0.0036539980151318796,
+      "latency_ms": 2.7157881095937593,
+      "propagation_delay_ms": 2.7157173713518077,
+      "link_reliability": 0.9445655525137777,
+      "cost_metric": 3.283413492846998,
+      "is_bottleneck": 0,
+      "is_inter_domain": false
+    },
+    {
+      "edge_id": 9,
+      "u": 6,
+      "v": 12,
+      "bandwidth_mbps": 84.22089138888373,
+      "load_mbps": 36.82198097443763,
+      "utilization": 0.4372072103157263,
+      "queue_length_pkts": 0.3396456888854152,
+      "latency_ms": 12.265087783926994,
+      "propagation_delay_ms": 12.25586379108638,
+      "link_reliability": 0.9615801334853674,
+      "cost_metric": 18.19263306239802,
+      "is_bottleneck": 0,
+      "is_inter_domain": true
+    },
+    {
+      "edge_id": 10,
+      "u": 7,
+      "v": 9,
+      "bandwidth_mbps": 99.85046324576106,
+      "load_mbps": 42.594155655666306,
+      "utilization": 0.42657944961987493,
+      "queue_length_pkts": 0.31734130685997564,
+      "latency_ms": 12.70876857767913,
+      "propagation_delay_ms": 12.701318229104894,
+      "link_reliability": 0.9981394803855218,
+      "cost_metric": 17.70880626418145,
+      "is_bottleneck": 0,
+      "is_inter_domain": true
+    },
+    {
+      "edge_id": 11,
+      "u": 8,
+      "v": 9,
+      "bandwidth_mbps": 359.7595501773247,
+      "load_mbps": 24.798869018436548,
+      "utilization": 0.06893178792950247,
+      "queue_length_pkts": 0.005103376235551394,
+      "latency_ms": 2.4502745328005338,
+      "propagation_delay_ms": 2.450068742115815,
+      "link_reliability": 0.9544083180361498,
+      "cost_metric": 3.839885912371757,
+      "is_bottleneck": 0,
+      "is_inter_domain": false
+    },
+    {
+      "edge_id": 12,
+      "u": 8,
+      "v": 11,
+      "bandwidth_mbps": 208.3577527618723,
+      "load_mbps": 14.911626738169263,
+      "utilization": 0.0715674196928561,
+      "queue_length_pkts": 0.005516712435704251,
+      "latency_ms": 1.512749473454887,
+      "propagation_delay_ms": 1.5123795129849416,
+      "link_reliability": 0.9790898233025204,
+      "cost_metric": 3.9120982341377823,
+      "is_bottleneck": 0,
+      "is_inter_domain": false
+    },
+    {
+      "edge_id": 13,
+      "u": 8,
+      "v": 12,
+      "bandwidth_mbps": 460.78864996414757,
+      "load_mbps": 31.40844644897057,
+      "utilization": 0.06816236999634075,
+      "queue_length_pkts": 0.00498596379231842,
+      "latency_ms": 3.5282151386955465,
+      "propagation_delay_ms": 3.528056392741638,
+      "link_reliability": 0.956151459496661,
+      "cost_metric": 4.6131525643572004,
+      "is_bottleneck": 0,
+      "is_inter_domain": false
+    },
+    {
+      "edge_id": 14,
+      "u": 8,
+      "v": 15,
+      "bandwidth_mbps": 18.70309988595151,
+      "load_mbps": 49.844866992253614,
+      "utilization": 1.2,
+      "queue_length_pkts": 198.00499999999982,
+      "latency_ms": 61.97650467814253,
+      "propagation_delay_ms": 14.936557224861172,
+      "link_reliability": 0.9942106083540697,
+      "cost_metric": 41.67009353963891,
+      "is_bottleneck": 1,
+      "is_inter_domain": true
+    },
+    {
+      "edge_id": 15,
+      "u": 9,
+      "v": 11,
+      "bandwidth_mbps": 173.95571508885132,
+      "load_mbps": 10.670171615789718,
+      "utilization": 0.06133843668395555,
+      "queue_length_pkts": 0.004008264492625053,
+      "latency_ms": 1.7470293541009259,
+      "propagation_delay_ms": 1.74665370273964,
+      "link_reliability": 0.9662180871887718,
+      "cost_metric": 4.620948460716491,
+      "is_bottleneck": 0,
+      "is_inter_domain": false
+    },
+    {
+      "edge_id": 16,
+      "u": 9,
+      "v": 12,
+      "bandwidth_mbps": 417.62041319892734,
+      "load_mbps": 12.33710941789552,
+      "utilization": 0.029541442486957458,
+      "queue_length_pkts": 0.0008992623306312454,
+      "latency_ms": 4.845106356169226,
+      "propagation_delay_ms": 4.845033465324201,
+      "link_reliability": 0.982100763198902,
+      "cost_metric": 6.042292948331878,
+      "is_bottleneck": 0,
+      "is_inter_domain": false
+    },
+    {
+      "edge_id": 17,
+      "u": 10,
+      "v": 12,
+      "bandwidth_mbps": 386.75416530090575,
+      "load_mbps": 28.291906668258182,
+      "utilization": 0.07315217056872877,
+      "queue_length_pkts": 0.005773590754590207,
+      "latency_ms": 2.600708355209009,
+      "propagation_delay_ms": 2.6005042830401623,
+      "link_reliability": 0.9821430064877499,
+      "cost_metric": 3.893315181691986,
+      "is_bottleneck": 0,
+      "is_inter_domain": false
+    },
+    {
+      "edge_id": 18,
+      "u": 13,
+      "v": 14,
+      "bandwidth_mbps": 613.1307522283676,
+      "load_mbps": 32.11316158835147,
+      "utilization": 0.05237571508465221,
+      "queue_length_pkts": 0.0028948345608024594,
+      "latency_ms": 3.1131449818741928,
+      "propagation_delay_ms": 3.1130548370731947,
+      "link_reliability": 0.9638273302237027,
+      "cost_metric": 3.9285415797994334,
+      "is_bottleneck": 0,
+      "is_inter_domain": false
+    },
+    {
+      "edge_id": 19,
+      "u": 14,
+      "v": 15,
+      "bandwidth_mbps": 980.1517006088159,
+      "load_mbps": 26.494022224757785,
+      "utilization": 0.027030532323007925,
+      "queue_length_pkts": 0.0007509482074598238,
+      "latency_ms": 2.9180986506213027,
+      "propagation_delay_ms": 2.9180703065593443,
+      "link_reliability": 0.9809331424572634,
+      "cost_metric": 3.428195422589269,
+      "is_bottleneck": 0,
+      "is_inter_domain": false
+    },
+    {
+      "edge_id": 20,
+      "u": 14,
+      "v": 16,
+      "bandwidth_mbps": 172.77173792160085,
+      "load_mbps": 22.62134408454672,
+      "utilization": 0.13093197045231827,
+      "queue_length_pkts": 0.01972593663979234,
+      "latency_ms": 1.8061059276348617,
+      "propagation_delay_ms": 1.8052339221268747,
+      "link_reliability": 0.9556824262401293,
+      "cost_metric": 4.699225763702761,
+      "is_bottleneck": 0,
+      "is_inter_domain": false
+    },
+    {
+      "edge_id": 21,
+      "u": 15,
+      "v": 16,
+      "bandwidth_mbps": 483.4723415311338,
+      "load_mbps": 14.433669479029266,
+      "utilization": 0.029854178283122722,
+      "queue_length_pkts": 0.0009186989636085667,
+      "latency_ms": 3.0431250787320807,
+      "propagation_delay_ms": 3.043061429016051,
+      "link_reliability": 0.950105234123078,
+      "cost_metric": 4.077246752661503,
+      "is_bottleneck": 0,
+      "is_inter_domain": false
+    },
+    {
+      "edge_id": 22,
+      "u": 15,
+      "v": 17,
+      "bandwidth_mbps": 775.5400765808541,
+      "load_mbps": 36.3470452649682,
+      "utilization": 0.04686675306995412,
+      "queue_length_pkts": 0.0023044968270645827,
+      "latency_ms": 3.5686853398005733,
+      "propagation_delay_ms": 3.5686219372100667,
+      "link_reliability": 0.9417417194497789,
+      "cost_metric": 4.213333945136678,
+      "is_bottleneck": 0,
+      "is_inter_domain": false
+    }
+  ],
+  "path_labels": [
+    {
+      "source": 0,
+      "target": 1,
+      "demand_mbps": 1.2674647521205904,
+      "path_hops": 1,
+      "e2e_latency_ms": 2.0541863446745365,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 0,
+      "target": 2,
+      "demand_mbps": 0.7035568134983037,
+      "path_hops": 1,
+      "e2e_latency_ms": 4.765681693659754,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 0,
+      "target": 3,
+      "demand_mbps": 0.7940341866723459,
+      "path_hops": 2,
+      "e2e_latency_ms": 50.941929612292,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 0,
+      "target": 4,
+      "demand_mbps": 2.0535757782344186,
+      "path_hops": 3,
+      "e2e_latency_ms": 53.60780029743518,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 0,
+      "target": 5,
+      "demand_mbps": 1.6194939638009838,
+      "path_hops": 3,
+      "e2e_latency_ms": 53.78504923343842,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 0,
+      "target": 6,
+      "demand_mbps": 0.4058418481889741,
+      "path_hops": 3,
+      "e2e_latency_ms": 57.45723952731018,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 0,
+      "target": 7,
+      "demand_mbps": 0.49794928576073655,
+      "path_hops": 3,
+      "e2e_latency_ms": 53.65771772188576,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 0,
+      "target": 8,
+      "demand_mbps": 3.1465674866382183,
+      "path_hops": 5,
+      "e2e_latency_ms": 68.81676083236542,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 0,
+      "target": 9,
+      "demand_mbps": 1.362871832630744,
+      "path_hops": 4,
+      "e2e_latency_ms": 66.36648629956488,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 0,
+      "target": 10,
+      "demand_mbps": 0.953049965735322,
+      "path_hops": 5,
+      "e2e_latency_ms": 72.32303566644617,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 0,
+      "target": 11,
+      "demand_mbps": 0.5071984663483144,
+      "path_hops": 5,
+      "e2e_latency_ms": 68.11351565366581,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 0,
+      "target": 12,
+      "demand_mbps": 0.825877777990891,
+      "path_hops": 4,
+      "e2e_latency_ms": 69.72232731123717,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 0,
+      "target": 13,
+      "demand_mbps": 0.32006659941209425,
+      "path_hops": 3,
+      "e2e_latency_ms": 14.02571344869725,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 0,
+      "target": 14,
+      "demand_mbps": 1.8912883415188606,
+      "path_hops": 2,
+      "e2e_latency_ms": 10.912568466823057,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 0,
+      "target": 15,
+      "demand_mbps": 2.4430739902615146,
+      "path_hops": 3,
+      "e2e_latency_ms": 11.48679691507023,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 0,
+      "target": 16,
+      "demand_mbps": 2.7616715095026536,
+      "path_hops": 3,
+      "e2e_latency_ms": 12.718674394457919,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 0,
+      "target": 17,
+      "demand_mbps": 1.3220834321780448,
+      "path_hops": 2,
+      "e2e_latency_ms": 7.918111575269656,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 1,
+      "target": 0,
+      "demand_mbps": 0.8531274350097537,
+      "path_hops": 1,
+      "e2e_latency_ms": 2.0541863446745365,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "demand_mbps": 0.8986108846509165,
+      "path_hops": 2,
+      "e2e_latency_ms": 6.819868038334291,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 1,
+      "target": 3,
+      "demand_mbps": 0.5574219571772324,
+      "path_hops": 1,
+      "e2e_latency_ms": 48.887743267617466,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 1,
+      "target": 4,
+      "demand_mbps": 1.1660630340049232,
+      "path_hops": 2,
+      "e2e_latency_ms": 51.55361395276065,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 1,
+      "target": 5,
+      "demand_mbps": 0.5573877953116257,
+      "path_hops": 2,
+      "e2e_latency_ms": 51.73086288876389,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 1,
+      "target": 6,
+      "demand_mbps": 0.9222101917879213,
+      "path_hops": 2,
+      "e2e_latency_ms": 55.403053182635645,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 1,
+      "target": 7,
+      "demand_mbps": 1.224743694399166,
+      "path_hops": 2,
+      "e2e_latency_ms": 51.603531377211226,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 1,
+      "target": 8,
+      "demand_mbps": 0.370416811662213,
+      "path_hops": 4,
+      "e2e_latency_ms": 66.7625744876909,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 1,
+      "target": 9,
+      "demand_mbps": 0.2779816220212837,
+      "path_hops": 3,
+      "e2e_latency_ms": 64.31229995489036,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 1,
+      "target": 10,
+      "demand_mbps": 0.885950955219194,
+      "path_hops": 4,
+      "e2e_latency_ms": 70.26884932177165,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 1,
+      "target": 11,
+      "demand_mbps": 0.742394087941068,
+      "path_hops": 4,
+      "e2e_latency_ms": 66.0593293089913,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 1,
+      "target": 12,
+      "demand_mbps": 0.9752495160249132,
+      "path_hops": 3,
+      "e2e_latency_ms": 67.66814096656265,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 1,
+      "target": 13,
+      "demand_mbps": 0.767737336313626,
+      "path_hops": 2,
+      "e2e_latency_ms": 11.971527104022712,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 1,
+      "target": 14,
+      "demand_mbps": 0.5270633563379508,
+      "path_hops": 1,
+      "e2e_latency_ms": 8.85838212214852,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 1,
+      "target": 15,
+      "demand_mbps": 0.2509009571582655,
+      "path_hops": 2,
+      "e2e_latency_ms": 9.432610570395692,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 1,
+      "target": 16,
+      "demand_mbps": 0.5559047278318633,
+      "path_hops": 2,
+      "e2e_latency_ms": 10.664488049783381,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 1,
+      "target": 17,
+      "demand_mbps": 0.36889422383022735,
+      "path_hops": 1,
+      "e2e_latency_ms": 5.863925230595119,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 2,
+      "target": 0,
+      "demand_mbps": 0.32858186718490895,
+      "path_hops": 1,
+      "e2e_latency_ms": 4.765681693659754,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 2,
+      "target": 1,
+      "demand_mbps": 0.5697920501175582,
+      "path_hops": 2,
+      "e2e_latency_ms": 6.819868038334291,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "demand_mbps": 0.7065706445176098,
+      "path_hops": 3,
+      "e2e_latency_ms": 55.70761130595176,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 2,
+      "target": 4,
+      "demand_mbps": 0.42297448473400895,
+      "path_hops": 4,
+      "e2e_latency_ms": 58.37348199109494,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 2,
+      "target": 5,
+      "demand_mbps": 0.8089272176021347,
+      "path_hops": 4,
+      "e2e_latency_ms": 58.55073092709818,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 2,
+      "target": 6,
+      "demand_mbps": 0.9876744271823179,
+      "path_hops": 4,
+      "e2e_latency_ms": 62.22292122096994,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 2,
+      "target": 7,
+      "demand_mbps": 0.8895738855358764,
+      "path_hops": 4,
+      "e2e_latency_ms": 58.42339941554552,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 2,
+      "target": 8,
+      "demand_mbps": 0.30237673421592764,
+      "path_hops": 6,
+      "e2e_latency_ms": 73.58244252602518,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 2,
+      "target": 9,
+      "demand_mbps": 1.2076288304410332,
+      "path_hops": 5,
+      "e2e_latency_ms": 71.13216799322464,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 2,
+      "target": 10,
+      "demand_mbps": 0.5757815475828975,
+      "path_hops": 6,
+      "e2e_latency_ms": 77.08871736010593,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 2,
+      "target": 11,
+      "demand_mbps": 0.5295446655983382,
+      "path_hops": 6,
+      "e2e_latency_ms": 72.87919734732557,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 2,
+      "target": 12,
+      "demand_mbps": 3.1391340596970077,
+      "path_hops": 5,
+      "e2e_latency_ms": 74.48800900489692,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 2,
+      "target": 13,
+      "demand_mbps": 0.2924128252095171,
+      "path_hops": 4,
+      "e2e_latency_ms": 18.791395142357004,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 2,
+      "target": 14,
+      "demand_mbps": 0.6539671417155345,
+      "path_hops": 3,
+      "e2e_latency_ms": 15.678250160482811,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 2,
+      "target": 15,
+      "demand_mbps": 0.38991546509818015,
+      "path_hops": 4,
+      "e2e_latency_ms": 16.252478608729984,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 2,
+      "target": 16,
+      "demand_mbps": 1.2341995183408485,
+      "path_hops": 4,
+      "e2e_latency_ms": 17.48435608811767,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 2,
+      "target": 17,
+      "demand_mbps": 0.4529801128121329,
+      "path_hops": 3,
+      "e2e_latency_ms": 12.68379326892941,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 3,
+      "target": 0,
+      "demand_mbps": 0.8378109820432261,
+      "path_hops": 2,
+      "e2e_latency_ms": 50.941929612292,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 3,
+      "target": 1,
+      "demand_mbps": 0.756517796205226,
+      "path_hops": 1,
+      "e2e_latency_ms": 48.887743267617466,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 3,
+      "target": 2,
+      "demand_mbps": 0.3710151081784397,
+      "path_hops": 3,
+      "e2e_latency_ms": 55.70761130595176,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 3,
+      "target": 4,
+      "demand_mbps": 0.49302328666321865,
+      "path_hops": 1,
+      "e2e_latency_ms": 2.665870685143182,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 3,
+      "target": 5,
+      "demand_mbps": 0.36253182809832685,
+      "path_hops": 1,
+      "e2e_latency_ms": 2.8431196211464207,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 3,
+      "target": 6,
+      "demand_mbps": 0.1396135268039467,
+      "path_hops": 1,
+      "e2e_latency_ms": 6.515309915018175,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 3,
+      "target": 7,
+      "demand_mbps": 0.4462309731959194,
+      "path_hops": 1,
+      "e2e_latency_ms": 2.7157881095937593,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 3,
+      "target": 8,
+      "demand_mbps": 0.31281501143179813,
+      "path_hops": 3,
+      "e2e_latency_ms": 17.874831220073425,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 3,
+      "target": 9,
+      "demand_mbps": 1.2861739944784012,
+      "path_hops": 2,
+      "e2e_latency_ms": 15.42455668727289,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 3,
+      "target": 10,
+      "demand_mbps": 0.3710397678875066,
+      "path_hops": 3,
+      "e2e_latency_ms": 21.381106054154177,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 3,
+      "target": 11,
+      "demand_mbps": 1.1837457325237952,
+      "path_hops": 3,
+      "e2e_latency_ms": 17.171586041373814,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 3,
+      "target": 12,
+      "demand_mbps": 1.0081941505700451,
+      "path_hops": 2,
+      "e2e_latency_ms": 18.78039769894517,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 3,
+      "target": 13,
+      "demand_mbps": 0.5622523944698091,
+      "path_hops": 3,
+      "e2e_latency_ms": 60.85927037164018,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 3,
+      "target": 14,
+      "demand_mbps": 0.6740605898726977,
+      "path_hops": 2,
+      "e2e_latency_ms": 57.746125389765986,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 3,
+      "target": 15,
+      "demand_mbps": 0.6739056501232933,
+      "path_hops": 3,
+      "e2e_latency_ms": 58.32035383801316,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 3,
+      "target": 16,
+      "demand_mbps": 0.36706903933044743,
+      "path_hops": 3,
+      "e2e_latency_ms": 59.552231317400846,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 3,
+      "target": 17,
+      "demand_mbps": 0.32661603215544793,
+      "path_hops": 2,
+      "e2e_latency_ms": 54.75166849821259,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 4,
+      "target": 0,
+      "demand_mbps": 1.2941109314902282,
+      "path_hops": 3,
+      "e2e_latency_ms": 53.60780029743518,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 4,
+      "target": 1,
+      "demand_mbps": 1.9525136436917305,
+      "path_hops": 2,
+      "e2e_latency_ms": 51.55361395276065,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 4,
+      "target": 2,
+      "demand_mbps": 0.7835063522714957,
+      "path_hops": 4,
+      "e2e_latency_ms": 58.373481991094934,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 4,
+      "target": 3,
+      "demand_mbps": 2.058642064295999,
+      "path_hops": 1,
+      "e2e_latency_ms": 2.665870685143182,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 4,
+      "target": 5,
+      "demand_mbps": 0.5236684554109088,
+      "path_hops": 2,
+      "e2e_latency_ms": 5.508990306289602,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 4,
+      "target": 6,
+      "demand_mbps": 0.3992053478517572,
+      "path_hops": 2,
+      "e2e_latency_ms": 9.181180600161358,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 4,
+      "target": 7,
+      "demand_mbps": 0.22991396435590006,
+      "path_hops": 2,
+      "e2e_latency_ms": 5.381658794736941,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 4,
+      "target": 8,
+      "demand_mbps": 0.9386979279893989,
+      "path_hops": 4,
+      "e2e_latency_ms": 20.540701905216608,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 4,
+      "target": 9,
+      "demand_mbps": 0.457293556904995,
+      "path_hops": 3,
+      "e2e_latency_ms": 18.090427372416073,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 4,
+      "target": 10,
+      "demand_mbps": 0.5311415641582155,
+      "path_hops": 4,
+      "e2e_latency_ms": 24.04697673929736,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 4,
+      "target": 11,
+      "demand_mbps": 0.3283891498502651,
+      "path_hops": 4,
+      "e2e_latency_ms": 19.837456726516997,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 4,
+      "target": 12,
+      "demand_mbps": 0.1439425026904138,
+      "path_hops": 3,
+      "e2e_latency_ms": 21.446268384088352,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 4,
+      "target": 13,
+      "demand_mbps": 0.3805695519825099,
+      "path_hops": 4,
+      "e2e_latency_ms": 63.52514105678336,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 4,
+      "target": 14,
+      "demand_mbps": 0.43124363255309217,
+      "path_hops": 3,
+      "e2e_latency_ms": 60.41199607490917,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 4,
+      "target": 15,
+      "demand_mbps": 0.8901851679571028,
+      "path_hops": 4,
+      "e2e_latency_ms": 60.986224523156345,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 4,
+      "target": 16,
+      "demand_mbps": 0.7103838398743192,
+      "path_hops": 4,
+      "e2e_latency_ms": 62.21810200254403,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 4,
+      "target": 17,
+      "demand_mbps": 0.8136608304368839,
+      "path_hops": 3,
+      "e2e_latency_ms": 57.41753918335577,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 5,
+      "target": 0,
+      "demand_mbps": 1.425018748304467,
+      "path_hops": 3,
+      "e2e_latency_ms": 53.78504923343842,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 5,
+      "target": 1,
+      "demand_mbps": 0.9372951394218227,
+      "path_hops": 2,
+      "e2e_latency_ms": 51.73086288876389,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 5,
+      "target": 2,
+      "demand_mbps": 0.8790616289291571,
+      "path_hops": 4,
+      "e2e_latency_ms": 58.55073092709817,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 5,
+      "target": 3,
+      "demand_mbps": 1.8389473978062674,
+      "path_hops": 1,
+      "e2e_latency_ms": 2.8431196211464207,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 5,
+      "target": 4,
+      "demand_mbps": 1.4804053079235744,
+      "path_hops": 2,
+      "e2e_latency_ms": 5.508990306289602,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 5,
+      "target": 6,
+      "demand_mbps": 0.5415079859141037,
+      "path_hops": 2,
+      "e2e_latency_ms": 9.358429536164596,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 5,
+      "target": 7,
+      "demand_mbps": 0.255955581433164,
+      "path_hops": 2,
+      "e2e_latency_ms": 5.55890773074018,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 5,
+      "target": 8,
+      "demand_mbps": 0.8604490036739747,
+      "path_hops": 4,
+      "e2e_latency_ms": 20.717950841219846,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 5,
+      "target": 9,
+      "demand_mbps": 0.829631841692372,
+      "path_hops": 3,
+      "e2e_latency_ms": 18.26767630841931,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 5,
+      "target": 10,
+      "demand_mbps": 0.5717894569367851,
+      "path_hops": 4,
+      "e2e_latency_ms": 24.2242256753006,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 5,
+      "target": 11,
+      "demand_mbps": 0.5490075240325996,
+      "path_hops": 4,
+      "e2e_latency_ms": 20.014705662520235,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 5,
+      "target": 12,
+      "demand_mbps": 2.1062571741623852,
+      "path_hops": 3,
+      "e2e_latency_ms": 21.62351732009159,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 5,
+      "target": 13,
+      "demand_mbps": 0.5455714850049423,
+      "path_hops": 4,
+      "e2e_latency_ms": 63.7023899927866,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 5,
+      "target": 14,
+      "demand_mbps": 0.3611183361411708,
+      "path_hops": 3,
+      "e2e_latency_ms": 60.58924501091241,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 5,
+      "target": 15,
+      "demand_mbps": 1.4736904599155922,
+      "path_hops": 4,
+      "e2e_latency_ms": 61.16347345915958,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 5,
+      "target": 16,
+      "demand_mbps": 0.4517297768280354,
+      "path_hops": 4,
+      "e2e_latency_ms": 62.39535093854727,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 5,
+      "target": 17,
+      "demand_mbps": 1.873656862949199,
+      "path_hops": 3,
+      "e2e_latency_ms": 57.59478811935901,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 6,
+      "target": 0,
+      "demand_mbps": 0.6986485867533808,
+      "path_hops": 3,
+      "e2e_latency_ms": 57.45723952731018,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 6,
+      "target": 1,
+      "demand_mbps": 0.843768650063969,
+      "path_hops": 2,
+      "e2e_latency_ms": 55.403053182635645,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 6,
+      "target": 2,
+      "demand_mbps": 0.9222002100381029,
+      "path_hops": 4,
+      "e2e_latency_ms": 62.22292122096994,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 6,
+      "target": 3,
+      "demand_mbps": 0.8589009227064113,
+      "path_hops": 1,
+      "e2e_latency_ms": 6.515309915018175,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 6,
+      "target": 4,
+      "demand_mbps": 0.259084411499536,
+      "path_hops": 2,
+      "e2e_latency_ms": 9.181180600161358,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 6,
+      "target": 5,
+      "demand_mbps": 0.2068897677418193,
+      "path_hops": 2,
+      "e2e_latency_ms": 9.358429536164596,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 6,
+      "target": 7,
+      "demand_mbps": 0.9975645791663936,
+      "path_hops": 2,
+      "e2e_latency_ms": 9.231098024611935,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 6,
+      "target": 8,
+      "demand_mbps": 0.45248091127521706,
+      "path_hops": 2,
+      "e2e_latency_ms": 15.79330292262254,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 6,
+      "target": 9,
+      "demand_mbps": 1.2723416100896787,
+      "path_hops": 2,
+      "e2e_latency_ms": 17.11019414009622,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 6,
+      "target": 10,
+      "demand_mbps": 1.2785636423477624,
+      "path_hops": 2,
+      "e2e_latency_ms": 14.865796139136002,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 6,
+      "target": 11,
+      "demand_mbps": 2.7049783231156077,
+      "path_hops": 3,
+      "e2e_latency_ms": 17.306052396077426,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 6,
+      "target": 12,
+      "demand_mbps": 1.9102871112894786,
+      "path_hops": 1,
+      "e2e_latency_ms": 12.265087783926994,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 6,
+      "target": 13,
+      "demand_mbps": 0.8970404790249331,
+      "path_hops": 4,
+      "e2e_latency_ms": 67.37458028665836,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 6,
+      "target": 14,
+      "demand_mbps": 0.5482556924718358,
+      "path_hops": 3,
+      "e2e_latency_ms": 64.26143530478416,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 6,
+      "target": 15,
+      "demand_mbps": 0.33015932249354374,
+      "path_hops": 4,
+      "e2e_latency_ms": 64.83566375303134,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 6,
+      "target": 16,
+      "demand_mbps": 0.9832751739038628,
+      "path_hops": 4,
+      "e2e_latency_ms": 66.06754123241902,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 6,
+      "target": 17,
+      "demand_mbps": 1.1526081685739578,
+      "path_hops": 3,
+      "e2e_latency_ms": 61.26697841323077,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 7,
+      "target": 0,
+      "demand_mbps": 0.8789347745616184,
+      "path_hops": 3,
+      "e2e_latency_ms": 53.65771772188576,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 7,
+      "target": 1,
+      "demand_mbps": 1.1064816197656495,
+      "path_hops": 2,
+      "e2e_latency_ms": 51.603531377211226,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 7,
+      "target": 2,
+      "demand_mbps": 1.8433264096320214,
+      "path_hops": 4,
+      "e2e_latency_ms": 58.42339941554552,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 7,
+      "target": 3,
+      "demand_mbps": 0.36453413050889505,
+      "path_hops": 1,
+      "e2e_latency_ms": 2.7157881095937593,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 7,
+      "target": 4,
+      "demand_mbps": 0.5697795560294748,
+      "path_hops": 2,
+      "e2e_latency_ms": 5.381658794736941,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 7,
+      "target": 5,
+      "demand_mbps": 0.9434374992146569,
+      "path_hops": 2,
+      "e2e_latency_ms": 5.55890773074018,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 7,
+      "target": 6,
+      "demand_mbps": 1.1959056490889017,
+      "path_hops": 2,
+      "e2e_latency_ms": 9.231098024611935,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 7,
+      "target": 8,
+      "demand_mbps": 1.3998966088360674,
+      "path_hops": 2,
+      "e2e_latency_ms": 15.159043110479665,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 7,
+      "target": 9,
+      "demand_mbps": 1.824662636466501,
+      "path_hops": 1,
+      "e2e_latency_ms": 12.70876857767913,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 7,
+      "target": 10,
+      "demand_mbps": 1.22414977433693,
+      "path_hops": 3,
+      "e2e_latency_ms": 20.154583289057364,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 7,
+      "target": 11,
+      "demand_mbps": 0.3925146756689355,
+      "path_hops": 2,
+      "e2e_latency_ms": 14.455797931780056,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 7,
+      "target": 12,
+      "demand_mbps": 1.882222731224923,
+      "path_hops": 2,
+      "e2e_latency_ms": 17.553874933848356,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 7,
+      "target": 13,
+      "demand_mbps": 0.8613219711006764,
+      "path_hops": 4,
+      "e2e_latency_ms": 63.57505848123394,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 7,
+      "target": 14,
+      "demand_mbps": 0.4982377495336408,
+      "path_hops": 3,
+      "e2e_latency_ms": 60.461913499359746,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 7,
+      "target": 15,
+      "demand_mbps": 0.8961243160419872,
+      "path_hops": 4,
+      "e2e_latency_ms": 61.03614194760692,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 7,
+      "target": 16,
+      "demand_mbps": 1.6956064940056157,
+      "path_hops": 4,
+      "e2e_latency_ms": 62.268019426994606,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 7,
+      "target": 17,
+      "demand_mbps": 0.6031323293611813,
+      "path_hops": 3,
+      "e2e_latency_ms": 57.46745660780635,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 8,
+      "target": 0,
+      "demand_mbps": 0.4053284242361489,
+      "path_hops": 5,
+      "e2e_latency_ms": 68.81676083236543,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 8,
+      "target": 1,
+      "demand_mbps": 0.57690051915204,
+      "path_hops": 4,
+      "e2e_latency_ms": 66.7625744876909,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 8,
+      "target": 2,
+      "demand_mbps": 0.435863616511303,
+      "path_hops": 6,
+      "e2e_latency_ms": 73.58244252602519,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 8,
+      "target": 3,
+      "demand_mbps": 1.086999096322381,
+      "path_hops": 3,
+      "e2e_latency_ms": 17.874831220073425,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 8,
+      "target": 4,
+      "demand_mbps": 0.4876613384942572,
+      "path_hops": 4,
+      "e2e_latency_ms": 20.540701905216608,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 8,
+      "target": 5,
+      "demand_mbps": 1.841782574206867,
+      "path_hops": 4,
+      "e2e_latency_ms": 20.717950841219846,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 8,
+      "target": 6,
+      "demand_mbps": 0.4040554588837663,
+      "path_hops": 2,
+      "e2e_latency_ms": 15.79330292262254,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 8,
+      "target": 7,
+      "demand_mbps": 1.062075059363194,
+      "path_hops": 2,
+      "e2e_latency_ms": 15.159043110479665,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 8,
+      "target": 9,
+      "demand_mbps": 0.41098495838489263,
+      "path_hops": 1,
+      "e2e_latency_ms": 2.4502745328005338,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 8,
+      "target": 10,
+      "demand_mbps": 0.7393828833277882,
+      "path_hops": 2,
+      "e2e_latency_ms": 6.128923493904555,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 8,
+      "target": 11,
+      "demand_mbps": 0.3616638113137012,
+      "path_hops": 1,
+      "e2e_latency_ms": 1.512749473454887,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 8,
+      "target": 12,
+      "demand_mbps": 0.22027237281145412,
+      "path_hops": 1,
+      "e2e_latency_ms": 3.5282151386955465,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 8,
+      "target": 13,
+      "demand_mbps": 0.3627694939376523,
+      "path_hops": 3,
+      "e2e_latency_ms": 68.00774831063802,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 8,
+      "target": 14,
+      "demand_mbps": 0.39868583826544196,
+      "path_hops": 2,
+      "e2e_latency_ms": 64.89460332876384,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 8,
+      "target": 15,
+      "demand_mbps": 0.10866406888549138,
+      "path_hops": 1,
+      "e2e_latency_ms": 61.97650467814253,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 8,
+      "target": 16,
+      "demand_mbps": 0.9369865368459528,
+      "path_hops": 2,
+      "e2e_latency_ms": 65.01962975687461,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 8,
+      "target": 17,
+      "demand_mbps": 1.3607337607056735,
+      "path_hops": 2,
+      "e2e_latency_ms": 65.5451900179431,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 9,
+      "target": 0,
+      "demand_mbps": 0.3737827226437391,
+      "path_hops": 4,
+      "e2e_latency_ms": 66.3664862995649,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 9,
+      "target": 1,
+      "demand_mbps": 1.2722166798274985,
+      "path_hops": 3,
+      "e2e_latency_ms": 64.31229995489036,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 9,
+      "target": 2,
+      "demand_mbps": 2.2219862143967473,
+      "path_hops": 5,
+      "e2e_latency_ms": 71.13216799322466,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 9,
+      "target": 3,
+      "demand_mbps": 1.6567681678515114,
+      "path_hops": 2,
+      "e2e_latency_ms": 15.42455668727289,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 9,
+      "target": 4,
+      "demand_mbps": 0.315743297455298,
+      "path_hops": 3,
+      "e2e_latency_ms": 18.090427372416073,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 9,
+      "target": 5,
+      "demand_mbps": 0.8955979352418305,
+      "path_hops": 3,
+      "e2e_latency_ms": 18.26767630841931,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 9,
+      "target": 6,
+      "demand_mbps": 1.718101447000053,
+      "path_hops": 2,
+      "e2e_latency_ms": 17.11019414009622,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 9,
+      "target": 7,
+      "demand_mbps": 0.8594823479158784,
+      "path_hops": 1,
+      "e2e_latency_ms": 12.70876857767913,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 9,
+      "target": 8,
+      "demand_mbps": 1.3507276665259371,
+      "path_hops": 1,
+      "e2e_latency_ms": 2.4502745328005338,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 9,
+      "target": 10,
+      "demand_mbps": 0.5407160393210466,
+      "path_hops": 2,
+      "e2e_latency_ms": 7.445814711378235,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 9,
+      "target": 11,
+      "demand_mbps": 0.7612153147620384,
+      "path_hops": 1,
+      "e2e_latency_ms": 1.7470293541009259,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 9,
+      "target": 12,
+      "demand_mbps": 0.6046599633573011,
+      "path_hops": 1,
+      "e2e_latency_ms": 4.845106356169226,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 9,
+      "target": 13,
+      "demand_mbps": 0.6431536140059128,
+      "path_hops": 4,
+      "e2e_latency_ms": 70.45802284343856,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 9,
+      "target": 14,
+      "demand_mbps": 0.6298837788319073,
+      "path_hops": 3,
+      "e2e_latency_ms": 67.34487786156437,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 9,
+      "target": 15,
+      "demand_mbps": 1.294123135657364,
+      "path_hops": 2,
+      "e2e_latency_ms": 64.42677921094307,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 9,
+      "target": 16,
+      "demand_mbps": 0.4079620735960326,
+      "path_hops": 3,
+      "e2e_latency_ms": 67.46990428967514,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 9,
+      "target": 17,
+      "demand_mbps": 0.980555029433247,
+      "path_hops": 3,
+      "e2e_latency_ms": 67.99546455074363,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 10,
+      "target": 0,
+      "demand_mbps": 1.3781054334949498,
+      "path_hops": 5,
+      "e2e_latency_ms": 72.32303566644617,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 10,
+      "target": 1,
+      "demand_mbps": 0.5445415317770189,
+      "path_hops": 4,
+      "e2e_latency_ms": 70.26884932177164,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 10,
+      "target": 2,
+      "demand_mbps": 1.2350429208942229,
+      "path_hops": 6,
+      "e2e_latency_ms": 77.08871736010593,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 10,
+      "target": 3,
+      "demand_mbps": 0.9628426725974216,
+      "path_hops": 3,
+      "e2e_latency_ms": 21.381106054154177,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 10,
+      "target": 4,
+      "demand_mbps": 1.7667572051786995,
+      "path_hops": 4,
+      "e2e_latency_ms": 24.04697673929736,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 10,
+      "target": 5,
+      "demand_mbps": 0.815511351210422,
+      "path_hops": 4,
+      "e2e_latency_ms": 24.2242256753006,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 10,
+      "target": 6,
+      "demand_mbps": 1.1567853165149042,
+      "path_hops": 2,
+      "e2e_latency_ms": 14.865796139136002,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 10,
+      "target": 7,
+      "demand_mbps": 0.7172979526882247,
+      "path_hops": 3,
+      "e2e_latency_ms": 20.154583289057364,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 10,
+      "target": 8,
+      "demand_mbps": 0.4019190431348796,
+      "path_hops": 2,
+      "e2e_latency_ms": 6.128923493904555,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 10,
+      "target": 9,
+      "demand_mbps": 0.6997626272637966,
+      "path_hops": 2,
+      "e2e_latency_ms": 7.445814711378235,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 10,
+      "target": 11,
+      "demand_mbps": 0.42136199827589904,
+      "path_hops": 3,
+      "e2e_latency_ms": 7.641672967359442,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 10,
+      "target": 12,
+      "demand_mbps": 0.19901155921144462,
+      "path_hops": 1,
+      "e2e_latency_ms": 2.600708355209009,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 10,
+      "target": 13,
+      "demand_mbps": 2.0177470691667425,
+      "path_hops": 5,
+      "e2e_latency_ms": 74.13667180454257,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 10,
+      "target": 14,
+      "demand_mbps": 0.637488938039904,
+      "path_hops": 4,
+      "e2e_latency_ms": 71.02352682266839,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 10,
+      "target": 15,
+      "demand_mbps": 0.9461633075685686,
+      "path_hops": 3,
+      "e2e_latency_ms": 68.10542817204708,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 10,
+      "target": 16,
+      "demand_mbps": 0.6792251311268173,
+      "path_hops": 4,
+      "e2e_latency_ms": 71.14855325077916,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 10,
+      "target": 17,
+      "demand_mbps": 1.867381009063477,
+      "path_hops": 4,
+      "e2e_latency_ms": 71.67411351184765,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 11,
+      "target": 0,
+      "demand_mbps": 0.9080467662087077,
+      "path_hops": 5,
+      "e2e_latency_ms": 68.11351565366581,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 11,
+      "target": 1,
+      "demand_mbps": 0.41382012626502157,
+      "path_hops": 4,
+      "e2e_latency_ms": 66.05932930899128,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 11,
+      "target": 2,
+      "demand_mbps": 0.5064685515069351,
+      "path_hops": 6,
+      "e2e_latency_ms": 72.87919734732557,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 11,
+      "target": 3,
+      "demand_mbps": 0.4184238310671091,
+      "path_hops": 3,
+      "e2e_latency_ms": 17.171586041373814,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 11,
+      "target": 4,
+      "demand_mbps": 0.4430218056838638,
+      "path_hops": 4,
+      "e2e_latency_ms": 19.837456726516997,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 11,
+      "target": 5,
+      "demand_mbps": 1.1655960928315523,
+      "path_hops": 4,
+      "e2e_latency_ms": 20.014705662520235,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 11,
+      "target": 6,
+      "demand_mbps": 0.554151172651601,
+      "path_hops": 3,
+      "e2e_latency_ms": 17.306052396077426,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 11,
+      "target": 7,
+      "demand_mbps": 0.719211385506908,
+      "path_hops": 2,
+      "e2e_latency_ms": 14.455797931780056,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 11,
+      "target": 8,
+      "demand_mbps": 0.5249605723212742,
+      "path_hops": 1,
+      "e2e_latency_ms": 1.512749473454887,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 11,
+      "target": 9,
+      "demand_mbps": 1.1015734399942645,
+      "path_hops": 1,
+      "e2e_latency_ms": 1.7470293541009259,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 11,
+      "target": 10,
+      "demand_mbps": 0.4090234172204369,
+      "path_hops": 3,
+      "e2e_latency_ms": 7.641672967359442,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 11,
+      "target": 12,
+      "demand_mbps": 0.6089270434442113,
+      "path_hops": 2,
+      "e2e_latency_ms": 5.040964612150433,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 11,
+      "target": 13,
+      "demand_mbps": 0.4744090436505464,
+      "path_hops": 4,
+      "e2e_latency_ms": 69.52049778409292,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 11,
+      "target": 14,
+      "demand_mbps": 0.4104049606134462,
+      "path_hops": 3,
+      "e2e_latency_ms": 66.40735280221872,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 11,
+      "target": 15,
+      "demand_mbps": 0.6890421222201986,
+      "path_hops": 2,
+      "e2e_latency_ms": 63.48925415159742,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 11,
+      "target": 16,
+      "demand_mbps": 0.9963511819122729,
+      "path_hops": 3,
+      "e2e_latency_ms": 66.5323792303295,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 11,
+      "target": 17,
+      "demand_mbps": 0.11085615650801332,
+      "path_hops": 3,
+      "e2e_latency_ms": 67.05793949139799,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 12,
+      "target": 0,
+      "demand_mbps": 0.9107125337873617,
+      "path_hops": 4,
+      "e2e_latency_ms": 69.72232731123717,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 12,
+      "target": 1,
+      "demand_mbps": 1.27026979325748,
+      "path_hops": 3,
+      "e2e_latency_ms": 67.66814096656263,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 12,
+      "target": 2,
+      "demand_mbps": 0.690624797685063,
+      "path_hops": 5,
+      "e2e_latency_ms": 74.48800900489692,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 12,
+      "target": 3,
+      "demand_mbps": 0.5832851297267853,
+      "path_hops": 2,
+      "e2e_latency_ms": 18.78039769894517,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 12,
+      "target": 4,
+      "demand_mbps": 0.5351165538421069,
+      "path_hops": 3,
+      "e2e_latency_ms": 21.446268384088352,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 12,
+      "target": 5,
+      "demand_mbps": 1.3263152370541875,
+      "path_hops": 3,
+      "e2e_latency_ms": 21.62351732009159,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 12,
+      "target": 6,
+      "demand_mbps": 1.2637023821082676,
+      "path_hops": 1,
+      "e2e_latency_ms": 12.265087783926994,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 12,
+      "target": 7,
+      "demand_mbps": 1.8934504436811972,
+      "path_hops": 2,
+      "e2e_latency_ms": 17.553874933848356,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 12,
+      "target": 8,
+      "demand_mbps": 0.33290162294764314,
+      "path_hops": 1,
+      "e2e_latency_ms": 3.5282151386955465,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 12,
+      "target": 9,
+      "demand_mbps": 1.78440682893237,
+      "path_hops": 1,
+      "e2e_latency_ms": 4.845106356169226,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 12,
+      "target": 10,
+      "demand_mbps": 0.31816619066331137,
+      "path_hops": 1,
+      "e2e_latency_ms": 2.600708355209009,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 12,
+      "target": 11,
+      "demand_mbps": 1.4466396774859813,
+      "path_hops": 2,
+      "e2e_latency_ms": 5.040964612150433,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 12,
+      "target": 13,
+      "demand_mbps": 1.3723011759948849,
+      "path_hops": 4,
+      "e2e_latency_ms": 71.53596344933356,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 12,
+      "target": 14,
+      "demand_mbps": 1.5612762901000157,
+      "path_hops": 3,
+      "e2e_latency_ms": 68.42281846745938,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 12,
+      "target": 15,
+      "demand_mbps": 0.3982770663388175,
+      "path_hops": 2,
+      "e2e_latency_ms": 65.50471981683808,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 12,
+      "target": 16,
+      "demand_mbps": 0.4327422684074596,
+      "path_hops": 3,
+      "e2e_latency_ms": 68.54784489557015,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 12,
+      "target": 17,
+      "demand_mbps": 3.9143972333964716,
+      "path_hops": 3,
+      "e2e_latency_ms": 69.07340515663864,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 13,
+      "target": 0,
+      "demand_mbps": 0.724964109597658,
+      "path_hops": 3,
+      "e2e_latency_ms": 14.02571344869725,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 13,
+      "target": 1,
+      "demand_mbps": 0.7631513817806536,
+      "path_hops": 2,
+      "e2e_latency_ms": 11.971527104022712,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 13,
+      "target": 2,
+      "demand_mbps": 1.2945515375378733,
+      "path_hops": 4,
+      "e2e_latency_ms": 18.791395142357004,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 13,
+      "target": 3,
+      "demand_mbps": 1.5921134256279397,
+      "path_hops": 3,
+      "e2e_latency_ms": 60.85927037164018,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 13,
+      "target": 4,
+      "demand_mbps": 0.6420922158807215,
+      "path_hops": 4,
+      "e2e_latency_ms": 63.52514105678336,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 13,
+      "target": 5,
+      "demand_mbps": 2.969446384932098,
+      "path_hops": 4,
+      "e2e_latency_ms": 63.7023899927866,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 13,
+      "target": 6,
+      "demand_mbps": 0.6286254073608132,
+      "path_hops": 4,
+      "e2e_latency_ms": 67.37458028665836,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 13,
+      "target": 7,
+      "demand_mbps": 0.8558596038232594,
+      "path_hops": 4,
+      "e2e_latency_ms": 63.57505848123394,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 13,
+      "target": 8,
+      "demand_mbps": 1.4958573861497368,
+      "path_hops": 3,
+      "e2e_latency_ms": 68.00774831063802,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 13,
+      "target": 9,
+      "demand_mbps": 1.0555768830888472,
+      "path_hops": 4,
+      "e2e_latency_ms": 70.45802284343856,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 13,
+      "target": 10,
+      "demand_mbps": 0.39349636870952576,
+      "path_hops": 5,
+      "e2e_latency_ms": 74.13667180454257,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 13,
+      "target": 11,
+      "demand_mbps": 1.1608882966157315,
+      "path_hops": 4,
+      "e2e_latency_ms": 69.52049778409291,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 13,
+      "target": 12,
+      "demand_mbps": 0.9281603665915318,
+      "path_hops": 4,
+      "e2e_latency_ms": 71.53596344933356,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 13,
+      "target": 14,
+      "demand_mbps": 0.5876707497486671,
+      "path_hops": 1,
+      "e2e_latency_ms": 3.1131449818741928,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 13,
+      "target": 15,
+      "demand_mbps": 0.38767695239336236,
+      "path_hops": 2,
+      "e2e_latency_ms": 6.031243632495496,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 13,
+      "target": 16,
+      "demand_mbps": 0.4371015097031942,
+      "path_hops": 2,
+      "e2e_latency_ms": 4.919250909509055,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 13,
+      "target": 17,
+      "demand_mbps": 0.6347313299618812,
+      "path_hops": 3,
+      "e2e_latency_ms": 9.59992897229607,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 14,
+      "target": 0,
+      "demand_mbps": 0.8813154600649631,
+      "path_hops": 2,
+      "e2e_latency_ms": 10.912568466823057,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 14,
+      "target": 1,
+      "demand_mbps": 1.3167222596891874,
+      "path_hops": 1,
+      "e2e_latency_ms": 8.85838212214852,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 14,
+      "target": 2,
+      "demand_mbps": 0.8402072231356367,
+      "path_hops": 3,
+      "e2e_latency_ms": 15.678250160482811,
+      "path_bottleneck_count": 0
+    },
+    {
+      "source": 14,
+      "target": 3,
+      "demand_mbps": 1.7943048122236285,
+      "path_hops": 2,
+      "e2e_latency_ms": 57.746125389765986,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 14,
+      "target": 4,
+      "demand_mbps": 0.34949743142034784,
+      "path_hops": 3,
+      "e2e_latency_ms": 60.41199607490917,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 14,
+      "target": 5,
+      "demand_mbps": 1.720985656179554,
+      "path_hops": 3,
+      "e2e_latency_ms": 60.58924501091241,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 14,
+      "target": 6,
+      "demand_mbps": 0.7000616487180769,
+      "path_hops": 3,
+      "e2e_latency_ms": 64.26143530478416,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 14,
+      "target": 7,
+      "demand_mbps": 2.1402732651784473,
+      "path_hops": 3,
+      "e2e_latency_ms": 60.461913499359746,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 14,
+      "target": 8,
+      "demand_mbps": 2.3953889160539097,
+      "path_hops": 2,
+      "e2e_latency_ms": 64.89460332876384,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 14,
+      "target": 9,
+      "demand_mbps": 1.0653506559348322,
+      "path_hops": 3,
+      "e2e_latency_ms": 67.34487786156437,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 14,
+      "target": 10,
+      "demand_mbps": 0.6143815419652856,
+      "path_hops": 4,
+      "e2e_latency_ms": 71.02352682266839,
+      "path_bottleneck_count": 1
+    },
+    {
+      "source": 14,
+      "target": 11,
+      "demand_mbps": 0.4703783128420696,
+      "path_hops": 3,
+      "e2e_latency_ms": 66.40735280221872,
+      "path_bottleneck_count": 1
+    }
+  ],
+  "summary": {
+    "avg_utilization": 0.22257348711905797,
+    "max_utilization": 1.2
+  }
+}
