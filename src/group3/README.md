@@ -616,22 +616,28 @@ Intra-domain links: 100–1000 Mbps. Inter-domain links: 10–100 Mbps (narrower
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/DKsheeraj/IAP_TermProject.git
-cd IAP_TermProject
+git clone https://github.com/code-Harsh247/GNNs-for-Multi-Domain-Routing-Optimization.git
+cd GNNs-for-Multi-Domain-Routing-Optimization
 
-# 2. Create and activate virtual environment
-python -m venv iap_proj
-source iap_proj/bin/activate          # Linux / macOS
-# iap_proj\Scripts\activate           # Windows CMD
-# $env:PYTHONPATH = "src"            # Windows PowerShell
+# 2. Checkout the correct branch (Group-3 work)
+git checkout group-3
 
-# 3. Install dependencies
+# 3. Create and activate virtual environment
+python -m venv venv
+
+# Activate (choose based on OS)
+source venv/bin/activate          # Linux / macOS
+# venv\Scripts\activate           # Windows CMD
+# .\venv\Scripts\Activate.ps1     # Windows PowerShell
+
+# 4. Install dependencies
 pip install --upgrade pip
-pip install -r requirements.txt
+pip install -r src/group3/requirements.txt
 
-# 4. Set PYTHONPATH so the package is importable
-export PYTHONPATH=src                 # Linux / macOS
-# set PYTHONPATH=src                  # Windows CMD
+# 5. Set PYTHONPATH so src is importable
+export PYTHONPATH=src             # Linux / macOS
+# set PYTHONPATH=src              # Windows CMD
+# $env:PYTHONPATH="src"           # Windows PowerShell
 ```
 
 **`requirements.txt`:**
