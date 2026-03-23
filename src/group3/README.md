@@ -41,70 +41,43 @@ Group 11 consumes the files produced here directly. The file formats, naming con
 ## 2. Repository Structure
 
 ```
-IAP_TermProject/
-├── src/
-│   └── gnn_routing/
-│       ├── __init__.py          # Package exports
-│       ├── config.py            # DatasetConfig dataclass + type distribution table
-│       ├── topology.py          # 5 topology type builders + multi-domain partitioning
-│       ├── traffic.py           # Time-varying traffic matrix generator
-│       ├── latency.py           # M/M/1 static labels + M/M/1/M/G/1 temporal simulation
-│       ├── exporters.py         # All file writers (GraphML, JSON, CSV, labels, snapshots)
-│       └── dataset.py           # End-to-end pipeline orchestrator
-│
-├── scripts/
-│   ├── generate_dataset.py      # CLI entry point
-│   └── validate_dataset.py      # Pre-handoff spec compliance checker
-│
-├── data/
-│   └── raw/                     # Default output directory (generated, not committed)
-│
-├── requirements.txt
-└── README.md
-```
-
-## 2. Repository Structure
-
-```
 ## 2. Repository Structure
 
 ```
 .
-├── src/                             
-│   ├── group3/                       
-│   │   ├── domain_modeling/          
-│   │   │   └── traffic.py            # Time-varying traffic matrix generator
+├── src/
+│   ├── group3/
+│   │   ├── domain_modeling/
+│   │   │   └── traffic.py                # Time-varying traffic matrix generator
 │   │   │
-│   │   ├── labeling/                 
-│   │   │   ├── __init__.py           # Package exports
-│   │   │   ├── config.py             # DatasetConfig dataclass + type distribution table
-│   │   │   ├── dataset.py            # End-to-end pipeline orchestrator
-│   │   │   ├── exporters.py          # All file writers (GraphML, JSON, CSV, labels,snapshots)
-│   │   │   └── latency.py            # M/M/1 static labels + M/M/1/M/G/1 temporal simulation
+│   │   ├── labeling/
+│   │   │   ├── __init__.py               # Package exports
+│   │   │   ├── config.py                 # DatasetConfig dataclass + type distribution table
+│   │   │   ├── dataset.py                # End-to-end pipeline orchestrator
+│   │   │   ├── exporters.py              # File writers (GraphML, JSON, CSV, labels, snapshots)
+│   │   │   └── latency.py                # M/M/1 static labels + M/M/1/M/G/1 temporal simulation
 │   │   │
-│   │   ├── topology_gen/             
-│   │   │   └── topology.py           # 5 topology type builders + multi-domain partitioning
+│   │   ├── topology_gen/
+│   │   │   └── topology.py               # 5 topology builders + multi-domain partitioning
 │   │   │
 │   │   ├── scripts/
-│   |   |   ├── generate_dataset.py      # CLI entry point
-│   |   |   └── validate_dataset.py      # Pre-handoff spec compliance checker
-|   |   |
-|   |   ├── requirements.txt                 
-|   |   ├── README.md                         
+│   │   │   ├── generate_dataset.py       # CLI entry point
+│   │   │   └── validate_dataset.py       # Dataset validation & spec checks
+│   │   │
+│   │   ├── requirements.txt              # Dependencies (group-specific)
+│   │   └── README.md                    # Group-specific documentation
 │   │
-|   |
-│   └── group11/                     
+│   └── group11/                         # Group-11 implementation
 │
-├── notebooks/                       
-├── tests/
-├── docs/
-|
+├── notebooks/                           # Experiments / analysis
+├── tests/                               # Unit tests
+├── docs/                                # Reports / documentation
+│
 ├── data/
-│   ├── raw/                     # Default output directory (generated, not committed)
-│   └── processed/
+│   ├── raw/                             # Generated outputs (not committed)
+│   └── processed/                       # Processed datasets
                        
 ```
-
 ---
 
 ## 3. Architecture Overview
