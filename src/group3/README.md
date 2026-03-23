@@ -40,10 +40,7 @@ Group 11 consumes the files produced here directly. The file formats, naming con
 
 ## 2. Repository Structure
 
-```
-## 2. Repository Structure
-
-```
+```bash
 .
 ├── src/
 │   ├── group3/
@@ -67,18 +64,15 @@ Group 11 consumes the files produced here directly. The file formats, naming con
 │   │   ├── requirements.txt              # Dependencies (group-specific)
 │   │   └── README.md                    # Group-specific documentation
 │   │
-│   └── group11/                         # Group-11 implementation
+│   └── group11/                         
 │
-├── notebooks/                           # Experiments / analysis
-├── tests/                               # Unit tests
-├── docs/                                # Reports / documentation
+├── notebooks/                           
+├── tests/                               
+├── docs/                                
 │
 ├── data/
 │   ├── raw/                             # Generated outputs (not committed)
 │   └── processed/                       # Processed datasets
-                       
-```
----
 
 ## 3. Architecture Overview
 
