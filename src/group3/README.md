@@ -63,6 +63,48 @@ IAP_TermProject/
 └── README.md
 ```
 
+## 2. Repository Structure
+
+```
+## 2. Repository Structure
+
+```
+.
+├── src/                             
+│   ├── group3/                       
+│   │   ├── domain_modeling/          
+│   │   │   └── traffic.py            # Time-varying traffic matrix generator
+│   │   │
+│   │   ├── labeling/                 
+│   │   │   ├── __init__.py           # Package exports
+│   │   │   ├── config.py             # DatasetConfig dataclass + type distribution table
+│   │   │   ├── dataset.py            # End-to-end pipeline orchestrator
+│   │   │   ├── exporters.py          # All file writers (GraphML, JSON, CSV, labels,snapshots)
+│   │   │   └── latency.py            # M/M/1 static labels + M/M/1/M/G/1 temporal simulation
+│   │   │
+│   │   ├── topology_gen/             
+│   │   │   └── topology.py           # 5 topology type builders + multi-domain partitioning
+│   │   │
+│   │   ├── scripts/
+│   |   |   ├── generate_dataset.py      # CLI entry point
+│   |   |   └── validate_dataset.py      # Pre-handoff spec compliance checker
+|   |   |
+|   |   ├── requirements.txt                 
+|   |   ├── README.md                         
+│   │
+|   |
+│   └── group11/                     
+│
+├── notebooks/                       
+├── tests/
+├── docs/
+|
+├── data/
+│   ├── raw/                     # Default output directory (generated, not committed)
+│   └── processed/
+                       
+```
+
 ---
 
 ## 3. Architecture Overview
