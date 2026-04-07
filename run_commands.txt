@@ -1,0 +1,177 @@
+================================================================================
+  GNNs for Multi-Domain Routing Optimization — Run Commands
+================================================================================
+  Run all commands from the repo root:
+    cd c:\GNNs-for-Multi-Domain-Routing-Optimization
+================================================================================
+
+
+--------------------------------------------------------------------------------
+STEP 0 — Install Dependencies
+--------------------------------------------------------------------------------
+
+# Install root requirements (PyTorch, PyG, NumPy, NetworkX, etc.)
+pip install -r requirements.txt
+
+# Install Group 3 extra requirements (tqdm, matplotlib, plotly, pyvis, pypdf)
+pip install -r src/group3/requirements.txt
+
+
+--------------------------------------------------------------------------------
+STEP 1 — Generate Raw Dataset  [Group 3]
+  Produces: data/raw/topology_index.json
+            data/raw/topologies/{graphml,json,csv}/
+            data/raw/labels/
+            data/raw/snapshots/
+--------------------------------------------------------------------------------
+
+# Option A: Full run — 500 topologies, 12 timesteps each (production)
+python src/group3/scripts/generate_dataset.py
+
+# Option B: Smoke test — 5 topologies, 4 timesteps (fast dev/test)
+python src/group3/scripts/generate_dataset.py --num-topologies 5 --min-nodes 10 --max-nodes 30 --timesteps 4 --no-distribution --output-dir outputs/smoke_dataset
+
+# Option C: M/G/1 queueing model variant
+python src/group3/scripts/generate_dataset.py --queue-model mg1
+
+# Option D: Higher flash-crowd probability
+python src/group3/scripts/generate_dataset.py --flash-crowd-prob 0.20
+
+
+--------------------------------------------------------------------------------
+STEP 1 (ALTERNATIVE) — Generate Mock Data  [Group 11 dev/test only]
+  Use this when Group 3 data is not yet available.
+  Produces: 5 mock topologies at data/raw/topology_001 … topology_005
+--------------------------------------------------------------------------------
+
+python src/group11/generate_mock_data.py
+
+
+--------------------------------------------------------------------------------
+STEP 2 — Validate Raw Dataset  [Group 3 — optional]
+  Validates topology files, GraphML keys, static labels, snapshots,
+  CSV columns, and topology_index.json against spec.
+--------------------------------------------------------------------------------
+
+# Validate default output directory (data/raw)
+python src/group3/scripts/validate_dataset.py
+
+# Validate a custom output directory
+python src/group3/scripts/validate_dataset.py --data-dir outputs/smoke_dataset
+
+# Quiet mode (suppress per-file output)
+python src/group3/scripts/validate_dataset.py --data-dir data/raw --quiet
+
+# Skip temporal snapshot validation
+python src/group3/scripts/validate_dataset.py --data-dir data/raw --skip-temporal
+
+
+--------------------------------------------------------------------------------
+STEP 3 — Feature Engineering  [Group 11 — Phase A]
+  Reads:    data/raw/topology_index.json
+            data/raw/topologies/json/*.json
+  Produces: data/processed/features/topology_XXX_node_features.npy   (N, 12)
+            data/processed/features/topology_XXX_edge_features.npy   (M,  5)
+            data/processed/features/topology_XXX_global_features.npy (11,)
+--------------------------------------------------------------------------------
+
+python src/group11/feature_engineering/build_features.py
+
+
+--------------------------------------------------------------------------------
+STEP 4 — Traffic Simulation  [Group 11 — Phase B]
+  Reads:    data/raw/topology_index.json
+  Produces: data/processed/traffic/topology_XXX_traffic.json
+            (16 traffic matrices per topology: 4 app types x 4 load conditions)
+--------------------------------------------------------------------------------
+
+python src/group11/traffic_simulation/simulate_traffic.py
+
+
+--------------------------------------------------------------------------------
+STEP 5 — Enrich Ground Truth Labels  [Group 11 — Phase C]
+  Reads:    data/raw/topology_index.json
+            data/raw/topologies/json/*.json
+            data/raw/labels/
+  Produces: data/processed/labels/topology_XXX_enriched_labels.json
+            (end-to-end path latency + bottleneck identification,
+             all src-dst pairs, 4 load conditions)
+--------------------------------------------------------------------------------
+
+python src/group11/ground_truth/enrich_labels.py
+
+
+--------------------------------------------------------------------------------
+STEP 6 — Assemble GNN Dataset  [Group 11 — Phase D]
+  *** Requires STEP 3 and STEP 5 to complete first ***
+  Reads:    data/processed/features/
+            data/processed/labels/
+  Produces: data/processed/dataset/gnn_dataset.pt      (PyTorch Geometric Data list)
+            data/processed/dataset/dataset_index.json  (metadata index)
+--------------------------------------------------------------------------------
+
+python src/group11/dataset_assembly/assemble_dataset.py
+
+
+--------------------------------------------------------------------------------
+STEP 7 — Validate Group 11 Outputs  [Final validation]
+  Checks: topology_index, node/edge/global features, traffic matrices,
+          enriched labels, gnn_dataset.pt, dataset_index.json
+  Exit 0 = all pass | Exit 1 = failures detected
+--------------------------------------------------------------------------------
+
+python tests/validate_group11.py
+
+
+================================================================================
+FULL PIPELINE — Copy-Paste Block (production run)
+================================================================================
+
+pip install -r requirements.txt
+pip install -r src/group3/requirements.txt
+python src/group3/scripts/generate_dataset.py
+python src/group3/scripts/validate_dataset.py
+python src/group11/feature_engineering/build_features.py
+python src/group11/traffic_simulation/simulate_traffic.py
+python src/group11/ground_truth/enrich_labels.py
+python src/group11/dataset_assembly/assemble_dataset.py
+python tests/validate_group11.py
+
+
+================================================================================
+FULL PIPELINE — Copy-Paste Block (quick dev/test with mock data, 5 topologies)
+================================================================================
+
+pip install -r requirements.txt
+pip install -r src/group3/requirements.txt
+python src/group11/generate_mock_data.py
+python src/group11/feature_engineering/build_features.py
+python src/group11/traffic_simulation/simulate_traffic.py
+python src/group11/ground_truth/enrich_labels.py
+python src/group11/dataset_assembly/assemble_dataset.py
+python tests/validate_group11.py
+
+
+================================================================================
+DEPENDENCY DIAGRAM
+================================================================================
+
+  [data/raw/] <──────────────────────────────────────────────────────────────┐
+       │                                                              generate_dataset.py (Step 1)
+       │                                                           OR generate_mock_data.py (Step 1 alt)
+       │
+       ├──► build_features.py  (Step 3) ──► data/processed/features/  ─────┐
+       │                                                                     │
+       ├──► simulate_traffic.py (Step 4) ──► data/processed/traffic/        │
+       │                                     (validated in Step 7 only)      │
+       │                                                                     │
+       └──► enrich_labels.py   (Step 5) ──► data/processed/labels/  ───────┤
+                                                                             │
+                                                            assemble_dataset.py (Step 6)
+                                                                             │
+                                                     data/processed/dataset/gnn_dataset.pt
+                                                     data/processed/dataset/dataset_index.json
+                                                                             │
+                                                         validate_group11.py (Step 7)
+
+================================================================================
